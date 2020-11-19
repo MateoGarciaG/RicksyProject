@@ -14,8 +14,8 @@
 
 /** LOGOTIPO */
 .logotipo {
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
 }
 
 /** BACKGROUND VIDEO */
@@ -31,20 +31,21 @@
     padding-left:1rem;
     padding-right:1rem;
     margin:auto;
-    text-align:center;
+    /* text-align:center; */
     display: flex;
-    flex-direction: row;
-    justify-content:space-between;
-    align-items: flex-start
+    justify-content: space-between;
+    align-items: center;
 
 }
 
 .container-video {
     position:absolute;
-    top:0;
+    /**Para que me permite observar el HEADER NAV*/
+    top:1;
     left:0;
     width:100%;
     height:100vh;
+    /** esto me permite */
     overflow:hidden;
 }
 
@@ -57,12 +58,16 @@
     z-index: 2;
 }
 
+/** Imagenes que acompañan a la presentación de index.html */
+.index-presentation {
+    height:auto;
+    width: 370px;
+}
+
 /** SECTION PART */
-section {
-    /* display: flex;
-    justify-content: center;
-    align-items: center;  */
-    padding: 20px 0;
+.section-pair-panel, .section-unpair-panel {
+    padding: 50px;
+    height: 600px;
 }
 
 .section-pair-panel {
@@ -74,12 +79,25 @@ section {
     color:#fff;
 }
 
-@media(max-width:960px){
-    .container{
-        padding-right:3rem;
-        padding-left:3rem;
+@media(max-width:760px){
+    .panel{
+        font-size: 10px;
+    }
+    .panel img {
+        max-width: 100%;
+        height: auto;
+
     }
 }
+
+@media(min-width:300px){
+    .panel img {
+        max-width: 70%;
+        height: auto;
+    }
+}
+
+
 
 /* <!--SECTIONS-->
 <section class="article-first-panel">
