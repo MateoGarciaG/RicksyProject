@@ -5,56 +5,117 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--META type="Description" para dar una breve descripción sobre la página-->
     <meta name="description" content="Página web Index Menús Intergalacticos">
-    <title></title>
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="shortcut icon"  type="image/png" href="../resources/img/logo.png">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="shortcut icon"  type="image/svg" href="../resources/svg/logo.svg">
 </head>
 <body>
     <!--HEADER-->
-    <header class="header-carta">
-        <h1>
+    <header class="header-index">
+        <!--Div para Titulo y Logotipo-->
+        <div class="titulo">
+            <h1>
+                JummyFood
+            </h1>
             
-        </h1>
+            <a href="index.html">
+                <img class="logotipo" src="../resources/img/logo.png" alt="">
+            </a>
+        </div>
+
+                <!--NAV-->
+        <nav class="nav-index">
+            <ul>
+                <li>
+                    <a href="menu.html">Menús</a>
+                </li>
+
+                <li>
+                    <a href="calidad.html">Calidad</a>
+                </li>
+
+                <li>
+                    <a href="contactos.html">Contactos</a>
+                </li>
+
+            </ul>
+        </nav>
+
+
     </header>
 
-    <!-- esta A lleva-->
-    <a href=""></a>
-
-    <!--NAV-->
-    <nav class="nav-carta">
-        <ul>
-            <li>
-                <a href="">Calidad</a>
-            </li>
-            <li>
-                <a href="">Menús</a>
-            </li>
-            <li>
-                <a href="">Contactos</a>
-            </li>
-        </ul>
-    </nav>
-
     <!--MAIN-->
-    <main class="main-">
-        <div class="logotipo">
-            <img src="" alt="logotipo">
-        </div>
+    <!-- <main class="main-index"> -->
         <!--Section dentro del MAIN-->
-        <section>
+        <!-- <section>
+            <div class="panel first-panel"> -->
+                <!--Primer mensaje del index.html-->
+                <!-- <h2>LOS MEJORES SABORES DESDE LUGARES MÁS RECONDITOS DEL UNIVERSO</h2> -->
+                <!--Imagen que acompaña al h2-->
+                <!-- <img src="" alt="">
+            </div>
+        </section>
+    </main> -->
+
+
+        <!--SECTIONS-->
+        <section class="panel section-first-panel">
+
+            <div class="container-video">
+                <!--BACKGROUND VIDEO-->
+                <video id="background-video" poster="background-video" autoplay muted loop>
+                    <source src="../resources/videos/videoplayback.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="first-panel">
+            <!--Primer mensaje del index.html-->
+                <h2>LOS MEJORES SABORES DESDE LUGARES MÁS RECONDITOS DEL UNIVERSO</h2>
+                <!--Imagen que acompaña al h2-->
+                <img src="" alt="">
+            </div>
 
         </section>
-    </main>
+        
+            <!--ARTICLE-->
+        <section class="section-pair-panel">
 
-    <!--SECTION-->
-    <section class="section-">
+            <div class="panel second-panel">
+            
+                <!--Imagen que acompaña al h2-->
+                <img src="" alt="">
+
+                <!--Primer mensaje Panel 2del index.html-->
+                <h2>LOS MEJORES SABORES DESDE LUGARES MÁS RECONDITOS DEL UNIVERSO</h2>
+
+            </div>
+
+        </section>
+
         <!--ARTICLE-->
-        <article class="article-">
+        <section class="section-unpair-panel">
 
-        </article>
+            <div class="panel third-panel">
+                <!--Primer mensaje del index.html-->
+                <h2>LOS MEJORES SABORES DESDE LUGARES MÁS RECONDITOS DEL UNIVERSO</h2>
+                <!--Imagen que acompaña al h2-->
+                <img src="" alt="">
+            </div>
+        
+        </section>
 
+        <!--ARTICLE-->
+        <section class="section-pair-panel">
 
-    </section>
+            <div class="panel fourth-panel">
+                <!--Imagen que acompaña al h2-->
+                <img src="" alt="">
+                <!--Primer mensaje del index.html-->
+                <h2>LOS MEJORES SABORES DESDE LUGARES MÁS RECONDITOS DEL UNIVERSO</h2>
+            </div>
+
+        </section>
+
 
         <!--ASIDE-->
         <aside class="aside-">
@@ -74,6 +135,7 @@
             </ol>
     
         </aside>
+
     
 
     <!--FOOTER-->

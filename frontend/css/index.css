@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap');
+
+/** Aplicando la fuente importada y reduciendo el margin y padding*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+}
+
+/* body{
+    background: #1D212B;
+} */
+
+/** LOGOTIPO */
+.logotipo {
+    width: 100px;
+    height: 100px;
+}
+
+/** BACKGROUND VIDEO */
+.section-first-panel {
+    height:100vh;
+    display:flex;
+    align-items:center;
+    color:#fff;
+}
+
+.panel{
+    max-width:960px;
+    padding-left:1rem;
+    padding-right:1rem;
+    margin:auto;
+    text-align:center;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: flex-start
+
+}
+
+.container-video {
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+}
+
+.container-video video {
+    min-height:100%;
+    min-width:100%;
+}
+
+.first-panel {
+    z-index: 2;
+}
+
+/** SECTION PART */
+section {
+    /* display: flex;
+    justify-content: center;
+    align-items: center;  */
+    padding: 20px 0;
+}
+
+.section-pair-panel {
+    background:#225470;
+}
+
+.section-unpair-panel {
+    background:#333;
+    color:#fff;
+}
+
+@media(max-width:960px){
+    .container{
+        padding-right:3rem;
+        padding-left:3rem;
+    }
+}
+
+/* <!--SECTIONS-->
+<section class="article-first-panel">
+
+    <div class="panel first-panel">
+    <!--Primer mensaje del index.html-->
+        <h2>LOS MEJORES SABORES DESDE LUGARES MÁS RECONDITOS DEL UNIVERSO</h2>
+        <!--Imagen que acompaña al h2-->
+        <img src="" alt="">
+    </div>
+
+</section>
+
+    <!--ARTICLE-->
+<section class="article-second-panel">
+
+    <div class="panel second-panel">
+    
+        <!--Imagen que acompaña al h2-->
+        <img src="" alt="">
+
+        <!--Primer mensaje Panel 2del index.html-->
+        <h2>LOS MEJORES SABORES DESDE LUGARES MÁS RECONDITOS DEL UNIVERSO</h2>
+
+    </div>
+
+</section>
+
+<!--ARTICLE-->
+<section class="article-third-panel">
+
+    <div class="panel third-panel">
+        <!--Primer mensaje del index.html-->
+        <h2>LOS MEJORES SABORES DESDE LUGARES MÁS RECONDITOS DEL UNIVERSO</h2>
+        <!--Imagen que acompaña al h2-->
+        <img src="" alt="">
+    </div>
+
+</section>
+
+<!--ARTICLE-->
+<section class="article-fourth-panel">
+
+    <div class="panel fourth-panel">
+        <!--Imagen que acompaña al h2-->
+        <img src="" alt="">
+        <!--Primer mensaje del index.html-->
+        <h2>LOS MEJORES SABORES DESDE LUGARES MÁS RECONDITOS DEL UNIVERSO</h2>
+    </div>
+
+</section> */
