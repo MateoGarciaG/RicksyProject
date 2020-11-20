@@ -12,6 +12,8 @@
     background: #1D212B;
 } */
 
+/** ******************************************/
+
 /** HEADER - NAV */
 
 header {
@@ -35,24 +37,23 @@ header {
     font-size: 40px;
 }
 
-.logotipo {
+/* .logotipo {
     border-radius: 10px;
-    /* width: 400px;
-    height: 400px; */
     width: auto;
     height: auto;
-}
+} */
 
 /** Si el tamaño de la página es menor a 700px, colocame más pequeño el logotipo y el h1 */
 @media(max-width:700px){
     .titulo h1 {
         font-size: 20px;
+        padding-right: 20px;
     }
-    .logotipo {
+    /* .logotipo {
         border-radius: none;
-        width: 100px;
-        height: 100px;
-    }
+        width: 150px;
+        height: 150px;
+    } */
 }
 
 li, a {
@@ -60,6 +61,14 @@ li, a {
     font-size: 16px;
     color: #edf0f1;
     text-decoration: none;
+    border-radius: 3px;
+}
+
+/** Si pasas el mouse por algún enlace del NAV, se sombrea*/
+li a:hover {
+    background: #8b9194;
+    transition: .5s;
+    padding: 6px;
 }
 
 nav ul {
@@ -79,6 +88,74 @@ nav ul li {
     cursor: pointer;
     margin-right: auto;
 }
+
+
+/** ******************************************/
+
+/** EN EL CASO DE QUE EL TAMAÑO DE LA PANTALLA SE REDUZCA, MEDIANTE @media
+** COLOCAME EL NAV EN UN "hamburguer NAV"
+*/
+
+#check-nav {
+    display: none;
+}
+
+.nav-toggle-label {
+    display: none;
+}
+@media screen and (max-width:800px) {
+
+    nav {
+        display: none;
+        border: 1px solid red;
+    }
+    .nav-toggle {
+        display: none;
+    }
+
+    .nav-toggle:checked ~ nav {
+        display: flex;
+    }
+
+    .items {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-toggle-label {
+        position: absolute;
+        right: 0;
+        margin-right: 1em;
+        border: 1px solid red;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        
+    }
+
+    .nav-toggle-label span img {
+        height: 100px;
+        width: 120px;
+    }
+
+    .nav-toggle-label span, .nav-toggle-label::before, .nav-toggle-label::after {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+    .nav-toggle-label::before, .nav-toggle-label::after {
+        content: '';
+        position: absolute;
+    }
+
+
+}
+
+
+/** ******************************************/
+
 
 /** BACKGROUND VIDEO */
 .section-first-panel {
@@ -140,6 +217,8 @@ nav ul li {
     width: 370px;
 }
 
+/** ******************************************/
+
 /** SECTION PART */
 .section-pair-panel, .section-unpair-panel {
     padding: 50px;
@@ -175,6 +254,8 @@ nav ul li {
         height: auto;
     }
 }
+
+/** ******************************************/
 
 /** IMAGEN INTERMEDIA ENTRE SECTIONS SCROLLING */
 .img-scroll {
