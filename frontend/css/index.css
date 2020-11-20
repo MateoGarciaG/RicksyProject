@@ -12,10 +12,72 @@
     background: #1D212B;
 } */
 
+/** HEADER - NAV */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    width: 100%;
+}
+
+/** Class Titulo con Logotipo */
+.titulo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.titulo h1 {
+    padding: 20px;
+    color: #edf0f1;
+    font-size: 40px;
+}
+
+.logotipo {
+    border-radius: 10px;
+    /* width: 400px;
+    height: 400px; */
+    width: auto;
+    height: auto;
+}
+
+/** Si el tamaño de la página es menor a 700px, colocame más pequeño el logotipo y el h1 */
+@media(max-width:700px){
+    .titulo h1 {
+        font-size: 20px;
+    }
+    .logotipo {
+        border-radius: none;
+        width: 100px;
+        height: 100px;
+    }
+}
+
+li, a {
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+
 /** LOGOTIPO */
 .logotipo {
-    width: 50px;
-    height: 50px;
+    width: 90px;
+    height: 90px;
+    cursor: pointer;
+    margin-right: auto;
 }
 
 /** BACKGROUND VIDEO */
@@ -23,20 +85,31 @@
     height:100vh;
     display:flex;
     align-items:center;
+    flex-wrap: wrap;
     color:#fff;
 }
+
 
 .panel{
     max-width:960px;
     padding-left:1rem;
     padding-right:1rem;
     margin:auto;
-    /* text-align:center; */
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
 
 }
+
+.panel img {
+    padding: 11px;
+    border-radius: 40px;
+}
+
+.panel h2 {
+    padding: 30px;
+}
+
 
 .container-video {
     position:absolute;
@@ -56,6 +129,9 @@
 
 .first-panel {
     z-index: 2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 /** Imagenes que acompañan a la presentación de index.html */
@@ -68,6 +144,9 @@
 .section-pair-panel, .section-unpair-panel {
     padding: 50px;
     height: 600px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .section-pair-panel {
@@ -97,6 +176,40 @@
     }
 }
 
+/** IMAGEN INTERMEDIA ENTRE SECTIONS SCROLLING */
+.img-scroll {
+    min-height: 400%;
+    position: relative;
+    opacity: 0.70;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 50px;
+    height: 300px;
+}
+
+.img-scrolling1 {
+    background-image: url('../resources/img/food_planets.jpg');
+}
+
+.img-scrolling2 {
+    background-image: url('../resources/img/cosecha.jpg')
+}
+
+.img-scrolling3 {
+    background-image: url('../resources/img/space_around.jpg');
+}
+
+.img-scrolling4 {
+    background-image: url('../resources/img/space_planets_minimalist.jpg');
+}
+
+/** FOOTER */
+footer {
+    padding: 50px;
+    height: 300px;
+}
 
 
 /* <!--SECTIONS-->
