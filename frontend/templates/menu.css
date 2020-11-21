@@ -1,0 +1,347 @@
+/** CALIDAD CSS */
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap');
+
+/** Aplicando la fuente importada y reduciendo el margin y padding*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+    
+}
+
+
+/** ******************************************/
+/** SECTION */
+section {
+    background-image: url(/imagenes/wallpaper.jpg) ;
+}
+
+
+/***********************************la barra de navegación****************************/
+.nav-menu-true{
+    display:flex;
+    display:-webkit-flex;
+    display:-ms-flexbox;
+    flex-direction: row;
+    align-content: space-between;
+
+}
+
+/** TEXTO color blanco MENUS COMIDAS */
+.all-images li, .all-images h4{
+    color: white;
+}
+/************************************este es el p-menu******************************************/
+.p-menu{
+    
+    display:flex;
+    display:-webkit-flex;
+    display:-ms-flexbox;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    
+}
+.p-menu .card {
+    position: relative;
+    max-width: 260px;
+    height: 240px;
+    background-color: rgba(90, 7, 86, 0.5);
+    margin: 30px 10px;
+    padding: 20px 15px;
+    display: flex;
+    box-shadow: 0 5px 202px rgba(0,0,0,0.5);
+    transition: 0.3s ease-in-out;
+    border-radius: 0.5cm;
+    /* justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; */
+}
+.p-menu .card-contenido {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.all-images .p-menu .card:hover {
+    box-shadow: 0 8px 16px 0rgba(0,0,0,0.2);
+    height: 400px;
+}
+
+/*********************************************este es el p-menu2*************************************/
+
+.p-menu2{
+    
+    display:flex;
+    display:-webkit-flex;
+    display:-ms-flexbox;
+    flex-wrap:wrap;
+    justify-content: space-around;
+    
+}
+.p-menu2 .card {
+    position: relative;
+    max-width: 260px;
+    height: 240px;
+    background-color: rgba(90, 7, 86, 0.5);
+    margin: 30px 10px;
+    padding: 20px 15px;
+    display: flex;
+    box-shadow: 0 5px 202px rgba(0,0,0,0.5);
+    transition: 0.3s ease-in-out;
+    border-radius: 0.5cm;
+}
+.p-menu2 .card-contenido {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.all-images .p-menu2 .card:hover{
+    box-shadow: 0 8px 16px 0rgba(0,0,0,0.2);
+    height: 400px;
+}
+
+/***********************************************este es el p-menu3********************************************************/
+
+.p-menu3{
+    display:flex;
+    display:-webkit-flex;
+    display:-ms-flexbox;
+    flex-wrap:wrap;
+    justify-content: space-around;
+}
+
+
+.p-menu3 .card {
+    position: relative;
+    max-width: 260px;
+    height: 240px;
+    background-color: rgba(90, 7, 86, 0.5);
+    margin: 30px 10px;
+    padding: 20px 15px;
+    display: flex;
+    box-shadow: 0 5px 202px rgba(0,0,0,0.5);
+    transition: 0.3s ease-in-out;
+    border-radius: 0.5cm;
+}
+
+
+.p-menu3 .card-contenido {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.all-images .p-menu3 .card:hover {
+    box-shadow: 0 8px 16px 0rgba(0,0,0,0.2);
+    height: 400px;
+}
+
+/***********************************************************************************************************************/
+
+/***********************************referido a las *animaciones* *elementos* de las cajas y el texto********************/
+.all-images .card .contenidor {
+    position: relative;
+    margin-top: -140px;
+    padding: 10px 15px;
+    text-align: center;
+    color: rgb(0, 0, 0);
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.all-images .card:hover .contenidor {
+    visibility: visible;
+    opacity: 1;
+    margin-top: -40px;
+    transition-delay: 0.3s;
+}
+
+/** FOOTER */
+/** *******************************************/
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px;
+    height: 300px;
+    background: #225470;
+}
+
+/** REDES SOCIALES ICONOS */
+/** *******************************************/
+
+footer .redes-sociales {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 50px;
+}
+
+footer .redes-sociales img {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+}
+
+footer .redes-sociales ul {
+    transform: translate(-50%, -50%);
+    width: 130px;
+    padding-top: 85px;
+    height: 100px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 70px;
+    margin-left: 70px;
+    
+}
+footer .redes-sociales ul li {
+    list-style: none;
+    margin: 0 10px;
+    height: 60px;
+}
+footer .redes-sociales ul li .iconos {
+    color: #000000;
+    font-size: 25px;
+    line-height: 50px;
+    transition: .5s;
+}
+footer .redes-sociales ul li .iconos:hover {
+    color: #ffffff;
+}
+footer .redes-sociales ul li a {
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+    text-align: center;
+    transition: 0.5s;
+    transform: translate(0,0px);
+    box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
+}
+footer .redes-sociales ul li a:hover {
+    transform: rotate(0deg) skew(0deg) translate(0, -10px);
+}
+
+/** FACEBOOK color */
+footer .redes-sociales ul li:nth-child(1) a:hover {
+    background-color: #3b5999;
+}
+
+/** TWITTER color */
+footer .redes-sociales ul li:nth-child(2) a:hover {
+    background-color: #55acee;
+}
+
+/** INSTAGRAM color */
+footer .redes-sociales ul li:nth-child(3) a:hover {
+    background-color: #e4405f;
+}
+
+/** *******************************************/
+
+/** FOOTER-DATOS */
+footer .footer-datos {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .footer-datos h3 {
+    color: white;
+    font-size: 25px;
+    padding-bottom: 18px;
+}
+
+footer .footer-datos ul li {
+    list-style: none;
+    padding-bottom: 15px;
+    padding-left: 10px;
+}
+
+footer .footer-datos ul li a{
+    
+    color: #ffffff;
+    padding: 5px;
+    text-decoration: none;
+}
+
+
+/* .footer-datos {
+    transform : translateX(-50) transLateY(-50%);
+    }
+    .footer-datos ul li {
+        display: inline-block;
+    }
+    .footer-datos ul li {
+        text-decoration: none;
+        color: #fff
+    .footer-datos ul li a:after {
+        content: '';
+        display: block
+        widht: 0;
+        height: 2px;
+        background: #fff;
+        transition widht .3s
+    }
+    .footer-datos ul li a:hover:after {
+        widht : 100%
+        transition: widht .3s;
+    */
+
+footer .footer-datos ul li a:hover {
+        background: #8b9194;
+        transition: .5s;
+        border-radius: 20px;
+}
+/* footer .footer-logotipo {
+    padding-right: 70px;
+} */
+
+
+footer .footer-logotipo img {
+    border-radius: 60px;
+    width: 130px;
+    height: 130px;
+}
+
+@media screen and (max-width:800px) {
+
+    footer .footer-datos {
+        font-size: 14px;
+        padding-left: 50px;
+    }
+
+    footer .footer-logotipo img {
+        width: 90px;
+        height: 90px;
+    }
+
+    footer .redes-sociales ul {
+        /* padding-left: 50px; */
+        width: 130px;
+        padding-top: 85px;
+    }
+
+}
+
+
+
+/** *******************************************/
