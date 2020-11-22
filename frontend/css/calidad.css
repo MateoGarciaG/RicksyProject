@@ -4,6 +4,7 @@
 
 /** Aplicando la fuente importada y reduciendo el margin y padding*/
 * {
+    /* position: fixed;  */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -11,19 +12,17 @@
 }
 
 
+
 /** ******************************************/
 
 /** HEADER - NAV */
-
 header {
-    position: fixed;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     width: 100%;
     background: #225470;
-    padding-left: 30px;
-    padding-right: 20px;
+
 }
 
 /** Class Titulo con Logotipo */
@@ -31,6 +30,7 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    text-decoration: none;
 }
 
 .titulo h1 {
@@ -40,15 +40,34 @@ header {
 }
 
 /** Si el tamaño de la página es menor a 700px, colocame más pequeño el logotipo y el h1 */
-@media(max-width:700px){
+@media(max-width:900px){
     .titulo h1 {
-        font-size: 20px;
-        padding-right: 20px;
+        font-size: 25px;
+        /* padding-right: 20px; */
+    }
+
+    header nav li a {
+        font-weight: 500;
+        font-size: 15px;
+        color: #edf0f1;
+        text-decoration: none;
+        border-radius: 3px;
     }
 
 }
 
-li, a {
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+header nav li a {
     font-weight: 500;
     font-size: 16px;
     color: #edf0f1;
@@ -57,31 +76,22 @@ li, a {
 }
 
 /** Si pasas el mouse por algún enlace del NAV, se sombrea*/
-li a:hover {
+header nav li a:hover {
     background: #8b9194;
     transition: .5s;
     padding: 6px;
 }
 
-nav ul {
-    list-style: none;
-}
-
-nav ul li {
-    display: inline-block;
-    padding: 0px 20px;
-}
-
-
 /** LOGOTIPO */
 .logotipo {
-    width: 90px;
-    height: 90px;
+    width: 70px;
+    height: 70px;
     cursor: pointer;
     margin-right: auto;
     padding: 8px;
     border-radius: 100px;
 }
+
 
 
 /** ******************************************/
@@ -93,13 +103,12 @@ nav ul li {
 
 
 
-.line{
+nav .line{
     width: 30px;
     height: 3px;
     background-color: white;
     margin: 5px;
 }
-
 
 label #btn, label #cancel {
     display: none;
@@ -110,14 +119,14 @@ label #btn, label #cancel {
 
 }
 
-#check {
+nav #check {
     display: none;
 }
 
 @media screen and (max-width:800px) {
 
     header {
-        position: fixed;
+        /* position: fixed; */
         top: 0;
     }
 
@@ -126,15 +135,17 @@ label #btn, label #cancel {
     }
 
 
-    ul{
+    nav ul{
         position: fixed;
         width: 100%;
-        height: 100vh;
+        height: 55vh;
         background: #225470;
         top: 80px;
-        left: -100%;
+        left: 100%;
         text-align: center;
         transition: all .5s;
+        display: flex;
+        flex-direction: column;
     }
 
     nav ul li {
@@ -144,25 +155,370 @@ label #btn, label #cancel {
     }
 
     nav ul li a {
-        font-size: 20px;
+        font-size: 15px;
     }
 
-    #check:checked ~ ul {
+    nav #check:checked ~ ul {
         left: 0;
     }
 
-    #check:checked ~ label #btn {
+    nav #check:checked ~ label #btn {
         display: none;
     }
 
-    #check:checked ~ label #cancel {
+    nav #check:checked ~ label #cancel {
         display: block;
     }
 
-    #check:checked ~ label #cancel img {
-        height: 50px;
-        width: 70px;
+    nav #check:checked ~ label #cancel img {
+        height: 80px;
+        width: 110px;
     }
 
+
+}
+
+/** SECTION */
+/** *******************************************/
+
+
+/** SECTION */
+/** *******************************************/
+
+section {
+    padding: 0px;
+    margin: 0px;
+    background-image: url('../resources/img/space_planets_minimalist.jpg');
+}
+
+section .section-titulo {
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+section ul {
+    /* background-position: center; */
+    /* width: 100%; */
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background: black;
+    /* height: 100%; */
+    margin: 0;
+    padding: 0;
+}
+
+section ul li {
+    list-style: none;
+    /* position: relative; */
+    width: 20%;
+    /* height: 100%; */
+    border-right: 1px solid #000;
+    /* float: left; */
+    box-sizing: border-box;
+    /** Aquí está la transición entre las imagenes de los menús de calidad*/
+    transition: 0.5s;
+    /* text-align: center;
+    overflow: hidden; */
+}
+
+section ul li:nth-child(1) {
+    background-image: url('../resources/img/calidad/calidad1.png');
+    background-size: cover;
+    background-position: left;
+    border-radius: 30px;
+}
+
+section ul li:nth-child(2) {
+    background-image: url('../resources/img/calidad/calidad2.png');
+    background-size: cover;
+    background-position: left;
+    border-radius: 30px;
+}
+
+section ul li:nth-child(3) {
+    background-image: url('../resources/img/calidad/calidad3.png');
+    background-size: cover;
+    background-position: left;
+    border-radius: 30px;
+}
+
+section ul li:nth-child(4) {
+    background-image: url('../resources/img/calidad/calidad4.png');
+    background-size: cover;
+    background-position: left;
+    border-radius: 30px;
+}
+
+section ul li:nth-child(5) {
+    background-image: url('../resources/img/calidad/calidad5.png');
+    background-size: cover;
+    background-position: left;
+    border-radius: 30px;
+}
+
+/* section ul li:nth-child(6) {
+    background-image: url('../resources/img/calidad/calidad6.png');
+    background-size: cover;
+    background-position: left;
+    border-radius: 30px;
+} */
+
+section ul:hover li {
+    /** Cuando se pase el mouse por una imagen, el resto se coloca en un ancho de 10% */
+    width: 10%;
+}
+
+section ul li:hover {
+    width: 60%;
+    opacity: 0.70;
+}
+
+section ul li {
+    display: flex;
+    align-items: flex-end;
+}
+
+section ul li .tamanyo-imagen {
+    height: 600px;
+}
+
+section ul li .section-description-calidad {
+
+    /* position: absolute;  */
+    bottom:100%;
+    left: 0;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 50%;
+    box-sizing: border-box;
+    color: #fff;
+    opacity: 0;
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+section ul li:hover .section-description-calidad {
+    bottom:0;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+    opacity: 1;
+}
+
+/* section {
+    margin: 0px;
+}
+
+@media screen and (max-width:800px) {
+    section ul li .section-description-calidad {
+        font-size: 13px;
+        
+    }
+} */
+
+
+
+/** *******************************************/
+
+/** ******************************************/
+
+/** IMAGEN INTERMEDIA ENTRE SECTIONS SCROLLING */
+.img-scroll {
+    min-height: 400%;
+    position: relative;
+    opacity: 0.70;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 50px;
+    height: 200px;
+}
+
+.img-scrolling1 {
+    background-image: url('../resources/img/cosecha.jpg');
+}
+
+
+/** *******************************************/
+
+
+/** FOOTER */
+/** *******************************************/
+
+footer {
+    /* position: absolute; */
+    /* left:0px; */
+    /* bottom: 0px; */
+    width: 100%;
+    /* padding-right: 200px; */
+    background: #225470;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    margin: 0px;
+}
+
+.main-content .box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    margin: 0px;
+}
+
+/** REDES SOCIALES ICONOS */
+/** *******************************************/
+footer .redes-sociales {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .redes-sociales ul {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+footer .redes-sociales ul li {
+    list-style: none;
+    margin: 0 10px;
+    height: 60px;
+}
+
+
+footer .redes-sociales ul li a img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+footer .redes-sociales ul li a {
+    /* position: relative; */
+    /** Display flexbox para acomodar las imagenes de las redes sociales dentro del circulo blanco*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: white;
+    /* text-align: center; */
+    transition: 0.5s;
+    transform: translate(0,0);
+    box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
+}
+footer .redes-sociales ul li a:hover {
+    /* transform: rotate(0deg) skew(0deg) translate(0, -10px); */
+    transform: rotate(0deg) skew(0deg) translate(0, -10px);
+}
+
+
+/** FACEBOOK color */
+footer .redes-sociales ul li:nth-child(1) a:hover {
+    background-color: #3B5999;
+}
+/** TWITTER color */
+footer .redes-sociales ul li:nth-child(2) a:hover {
+    background-color: #55ACEE;
+}
+/** INSTAGRAM color */
+footer .redes-sociales ul li:nth-child(3) a:hover {
+    background-color: #E4405F;
+}
+
+
+/** *******************************************/
+/** FOOTER-DATOS */
+
+footer .footer-datos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+footer .footer-datos h3 {
+    color: white;
+    font-size: 20px;
+    padding-bottom: 18px;
+}
+
+footer .footer-datos ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer .footer-datos ul li {
+    list-style: none;
+    padding-bottom: 15px;
+    padding-left: 10px;
+}
+footer .footer-datos ul li a{
+    color: #FFFFFF;
+    padding: 5px;
+    font-size: 12px;
+    text-decoration: none;
+}
+footer .footer-datos ul li a:hover {
+        background: #8B9194;
+        transition: .5s;
+        border-radius: 20px;
+}
+
+
+/** ******************************************/
+/** LOGITIPO DIV - IMG */
+footer .footer-logotipo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .footer-logotipo img {
+    border-radius: 60px;
+    width: 100px;
+    height: 100px;
+}
+
+/** ******************************************/
+
+/** SI LA MAXIMA ANCHURA DE LA PANTALLA ES 900PX */
+@media screen and (max-width:790px) {
+
+
+    /** El footer se vuelve flex-direction: column;*/
+    .main-content {
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .main-content .box {
+        flex-basis: 30%;
+        padding: 10px 10px;
+        width: 50%;
+    }
+    
+    /** icono redes sociales más pequeños*/
+    footer .redes-sociales {
+        display: none;
+    }
+
+    /** Cuando la pantalla tenga este tamallo, no muestres el logo*/
+    footer .footer-logotipo{
+        width: 100%;
+        height: auto;
+    }
 
 }

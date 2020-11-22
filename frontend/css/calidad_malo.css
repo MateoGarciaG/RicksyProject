@@ -1,27 +1,30 @@
+/** CALIDAD CSS */
+
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap');
 
 /** Aplicando la fuente importada y reduciendo el margin y padding*/
 * {
+    /* position: fixed;  */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Ubuntu", sans-serif;
 }
 
-/* body{
-    background: #1D212B;
-} */
 
 /** ******************************************/
 
 /** HEADER - NAV */
-
 header {
+    /* position: relative; */
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    z-index: 3;
     width: 100%;
+    background: #225470;
+    /* padding-left: 30px; */
+    /* padding-right: 20px; */
+    
 }
 
 /** Class Titulo con Logotipo */
@@ -37,26 +40,24 @@ header {
     font-size: 40px;
 }
 
-/* .logotipo {
-    border-radius: 10px;
-    width: auto;
-    height: auto;
-} */
-
 /** Si el tamaño de la página es menor a 700px, colocame más pequeño el logotipo y el h1 */
-@media(max-width:700px){
+@media(max-width:900px){
     .titulo h1 {
-        font-size: 20px;
-        padding-right: 20px;
+        font-size: 25px;
+        /* padding-right: 20px; */
     }
-    /* .logotipo {
-        border-radius: none;
-        width: 150px;
-        height: 150px;
-    } */
+
+    header nav li a {
+        font-weight: 500;
+        font-size: 15px;
+        color: #edf0f1;
+        text-decoration: none;
+        border-radius: 3px;
+    }
+
 }
 
-li, a {
+header nav li a {
     font-weight: 500;
     font-size: 16px;
     color: #edf0f1;
@@ -65,7 +66,7 @@ li, a {
 }
 
 /** Si pasas el mouse por algún enlace del NAV, se sombrea*/
-li a:hover {
+header nav li a:hover {
     background: #8b9194;
     transition: .5s;
     padding: 6px;
@@ -73,6 +74,8 @@ li a:hover {
 
 nav ul {
     list-style: none;
+    display: flex;
+    justify-content: space-between;
 }
 
 nav ul li {
@@ -83,10 +86,12 @@ nav ul li {
 
 /** LOGOTIPO */
 .logotipo {
-    width: 90px;
-    height: 90px;
+    width: 70px;
+    height: 70px;
     cursor: pointer;
     margin-right: auto;
+    padding: 8px;
+    border-radius: 100px;
 }
 
 
@@ -123,8 +128,8 @@ label #btn, label #cancel {
 @media screen and (max-width:800px) {
 
     header {
-        position: fixed;
-        top: 0;
+        /* position: fixed;
+        top: 0; */
     }
 
     label #btn {
@@ -132,28 +137,29 @@ label #btn, label #cancel {
     }
 
 
-    ul{
-        position: fixed;
-        width: 100%;
-        height: 100vh;
+    nav ul{
+        position: fixed; 
+        z-index: -1; 
+        width: 100%; 
+        height: 100vh; 
         background: #225470;
-        top: 80px;
-        left: -100%;
-        text-align: center;
-        transition: all .5s;
+        top: 80px; 
+        left: -100%; 
+        text-align: center; 
+        transition: all .5s; 
     }
 
     nav ul li {
-        display: block;
+        /* display: block; */
         margin: 50px 0;
         line-height: 30px;
     }
 
     nav ul li a {
-        font-size: 20px;
+        font-size: 15px;
     }
 
-    #check:checked ~ ul {
+    #check:checked ~ nav ul {
         left: 0;
     }
 
@@ -166,163 +172,138 @@ label #btn, label #cancel {
     }
 
     #check:checked ~ label #cancel img {
-        height: 80px;
-        width: 110px;
+        height: 50px;
+        width: 70px;
     }
 
 
 }
 
+/** SECTION */
+/** *******************************************/
 
-/** ******************************************/
-
-
-/** BACKGROUND VIDEO */
-.section-first-panel {
-    height:100vh;
-    display:flex;
-    align-items:center;
-    flex-wrap: wrap;
-    color:#fff;
+section {
+    padding: 0px;
+    margin: 0px;
 }
-
-
-.panel{
-    max-width:960px;
-    padding-left:1rem;
-    padding-right:1rem;
-    margin:auto;
+section ul {
+    /* background-position: center; */
+    /* width: 100%; */
     display: flex;
     justify-content: space-around;
-    align-items: center;
-
+    background: black;
+    /* height: 100%; */
+    margin: 0;
+    padding: 0;
 }
 
-.panel img {
-    padding: 11px;
-    border-radius: 40px;
+section ul li {
+    list-style: none;
+    /* position: relative; */
+    width: 20%;
+    height: 100%;
+    border-right: 1px solid #000;
+    /* float: left; */
+    box-sizing: border-box;
+    transition: 0.5s;
+    text-align: center;
+    overflow: hidden;
 }
 
-.panel h2 {
-    padding: 30px;
-}
-
-
-.container-video {
-    position:absolute;
-    /**Para que me permite observar el HEADER NAV*/
-    top:1;
-    left:0;
-    width:100%;
-    height:100vh;
-    /** esto me permite */
-    overflow:hidden;
-}
-
-.container-video video {
-    min-height:100%;
-    min-width:100%;
-}
-
-.first-panel {
-    z-index: 2;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-/** Imagenes que acompañan a la presentación de index.html */
-.index-presentation {
-    height:auto;
-    width: 370px;
-}
-
-/** ******************************************/
-
-/** SECTION PART */
-.section-pair-panel, .section-unpair-panel {
-    padding: 50px;
-    height: 600px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.section-pair-panel {
-    background:#225470;
-}
-
-.section-unpair-panel {
-    background:#333;
-    color:#fff;
-}
-
-@media(max-width:760px){
-    .panel{
-        font-size: 10px;
-    }
-    .panel img {
-        max-width: 100%;
-        height: auto;
-
-    }
-}
-
-@media(min-width:300px){
-    .panel img {
-        max-width: 70%;
-        height: auto;
-    }
-}
-
-/** ******************************************/
-
-/** IMAGEN INTERMEDIA ENTRE SECTIONS SCROLLING */
-.img-scroll {
-    min-height: 400%;
-    position: relative;
-    opacity: 0.70;
-    background-position: center;
+section ul li:nth-child(1) {
+    background-image: url('../resources/img/calidad/calidad1.png');
     background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    padding: 50px;
-    height: 300px;
+    background-position: left;
 }
 
-.img-scrolling1 {
-    background-image: url('../resources/img/food_planets.jpg');
+section ul li:nth-child(2) {
+    background-image: url('../resources/img/calidad/calidad2.png');
+    background-size: cover;
+    background-position: left;
 }
 
-.img-scrolling2 {
-    background-image: url('../resources/img/cosecha.jpg')
+section ul li:nth-child(3) {
+    background-image: url('../resources/img/calidad/calidad3.png');
+    background-size: cover;
+    background-position: left;
 }
 
-.img-scrolling3 {
-    background-image: url('../resources/img/space_around.jpg');
+section ul li:nth-child(4) {
+    background-image: url('../resources/img/calidad/calidad4.png');
+    background-size: cover;
+    background-position: left;
 }
 
-.img-scrolling4 {
-    background-image: url('../resources/img/space_planets_minimalist.jpg');
+section ul li:nth-child(5) {
+    background-image: url('../resources/img/calidad/calidad5.png');
+    background-size: cover;
+    background-position: left;
 }
+
+section ul li:nth-child(6) {
+    background-image: url('../resources/img/calidad/calidad6.png');
+    background-size: cover;
+    background-position: left;
+}
+
+section ul:hover li {
+    width: 10%;
+}
+
+section ul li:hover {
+    width: 60%;
+}
+
+section ul li .section-description-calidad {
+    /* position: absolute;  */
+    bottom:-100%;
+    left: 0; 
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    box-sizing: border-box;
+    color: #fff;
+    opacity: 0;
+}
+
+section ul li:hover .section-description-calidad {
+    bottom:0;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+    opacity: 1;
+}
+
+
+
+
+/** *******************************************/
+
 
 /** FOOTER */
 /** *******************************************/
 
 footer {
-
-    bottom: 0px;
+    /* position: absolute; */
+    /* left:0px; */
+    /* bottom: 0px; */
     width: 100%;
+    /* padding-right: 200px; */
     background: #225470;
 }
 
 .main-content {
     display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    margin: 0px;
 }
 
 .main-content .box {
-    flex-basis: 50%;
-    padding: 10px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    margin: 0px;
 }
 
 /** REDES SOCIALES ICONOS */
@@ -354,7 +335,7 @@ footer .redes-sociales ul li a img {
 }
 
 footer .redes-sociales ul li a {
-    position: relative;
+    /* position: relative; */
     /** Display flexbox para acomodar las imagenes de las redes sociales dentro del circulo blanco*/
     display: flex;
     justify-content: center;
@@ -363,7 +344,7 @@ footer .redes-sociales ul li a {
     height: 60px;
     border-radius: 50%;
     background-color: white;
-    text-align: center;
+    /* text-align: center; */
     transition: 0.5s;
     transform: translate(0,0);
     box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
@@ -471,7 +452,3 @@ footer .footer-logotipo img {
     }
 
 }
-
-
-
-/** *******************************************/
