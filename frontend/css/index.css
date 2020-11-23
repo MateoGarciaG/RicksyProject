@@ -306,23 +306,35 @@ label #btn, label #cancel {
     background-image: url('../resources/img/space_planets_minimalist.jpg');
 }
 
+/** *******************************************/
+
+
 /** FOOTER */
 /** *******************************************/
 
 footer {
-
-    bottom: 0px;
+    /* position: absolute; */
+    /* left:0px; */
+    /* bottom: 0px; */
     width: 100%;
+    /* padding-right: 200px; */
     background: #225470;
 }
 
 .main-content {
     display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    margin: 0px;
 }
 
 .main-content .box {
-    flex-basis: 50%;
-    padding: 10px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    margin: 0px;
 }
 
 /** REDES SOCIALES ICONOS */
@@ -354,7 +366,7 @@ footer .redes-sociales ul li a img {
 }
 
 footer .redes-sociales ul li a {
-    position: relative;
+    /* position: relative; */
     /** Display flexbox para acomodar las imagenes de las redes sociales dentro del circulo blanco*/
     display: flex;
     justify-content: center;
@@ -363,7 +375,7 @@ footer .redes-sociales ul li a {
     height: 60px;
     border-radius: 50%;
     background-color: white;
-    text-align: center;
+    /* text-align: center; */
     transition: 0.5s;
     transform: translate(0,0);
     box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
@@ -471,7 +483,3 @@ footer .footer-logotipo img {
     }
 
 }
-
-
-
-/** *******************************************/
