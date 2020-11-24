@@ -387,7 +387,7 @@ footer .redes-sociales ul li .iconos:hover {
 }
 footer .redes-sociales ul li a {
     position: relative;
-    display: block; /*si quitas este display tammbién queda bien, es una manera de arreglar el error xd*/
+    ; /*si quitas este display tammbién queda bien, es una manera de arreglar el error xd*/
     width: 50px;
     height: 50px;
     border-radius: 50%;

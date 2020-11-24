@@ -12,13 +12,6 @@
 }
 
 
-/** ******************************************/
-/** SECTION */
-section {
-    background-image: url(/imagenes/wallpaper.jpg) ;
-}
-
-
 /***********************************la barra de navegación****************************/
 
 /** ******************************************/
@@ -178,6 +171,107 @@ label #btn, label #cancel {
 
 
 }
+/*********************************************************MAIN********************************************************************/
+html {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+.margin {
+    margin: 0% 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.parallax {
+    background: url(../resources/img/contacto2.jpg)
+        repeat fixed 100%;
+}
+.parallax-inner {
+    padding-top: 10%;
+    padding-bottom: 10%;
+    display: flex;
+    justify-content: center;
+}
+.panel1 {
+    background-color: indigo;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+}
+.panel1 img {
+    border-radius: 25px;
+    border-style: double;
+}
+.texto {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    justify-content: space-around;
+    
+}
+.texto img {
+    display: flex;
+    justify-content: flex-end;
+
+}
+.panel2 {
+    background-color: indigo;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.texto2 img {
+    padding: 20px;
+}
+.texto2 {
+    padding: 20px
+}
+.texto2 h4 {
+    display: inline-block;
+    position: relative;
+    color: ivory;
+    padding: 2%;
+}
+.texto2 h4::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+.texto2 h4:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+.horario {
+    padding: 20px;
+}
+.horas, .horas li {
+    padding: 10px;
+}
+
+.maps iframe {
+    padding-top: 15px;
+}
+.maps h5 {
+    color: ivory;
+}
+.panel2 iframe {
+    border-radius: 35px;
+    border-style: double;
+}
+
+
+
 
 /** FOOTER */
 /** *******************************************/
@@ -240,7 +334,7 @@ footer .redes-sociales ul li .iconos:hover {
 }
 footer .redes-sociales ul li a {
     position: relative;
-    display: block; /*si quitas este display tammbién queda bien, es una manera de arreglar el error xd*/
+     /*si quitas este display tammbién queda bien, es una manera de arreglar el error xd*/
     width: 50px;
     height: 50px;
     border-radius: 50%;
