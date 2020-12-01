@@ -275,178 +275,134 @@ html {
 
 /** FOOTER */
 /** *******************************************/
-
 footer {
+    /* position: absolute; */
+    /* left:0px; */
+    /* bottom: 0px; */
+    width: 100%;
+    /* padding-right: 200px; */
+    background: #225470;
+}
+.main-content {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
     padding: 20px;
-    height: 300px;
-    background: #225470;
+    margin: 0px;
 }
-
+.main-content .box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    margin: 0px;
+}
 /** REDES SOCIALES ICONOS */
 /** *******************************************/
-
 footer .redes-sociales {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 100px;
-    height: 50px;
 }
-
-footer .redes-sociales img {
-    width: 50px;
-    height: 50px;
-    padding: 10px;
-}
-
 footer .redes-sociales ul {
-    transform: translate(-50%, -50%);
-    width: 130px;
-    padding-top: 85px;
-    height: 100px;
     margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 70px;
-    margin-left: 70px;
-    
 }
 footer .redes-sociales ul li {
     list-style: none;
     margin: 0 10px;
     height: 60px;
 }
-footer .redes-sociales ul li .iconos {
-    color: #000000;
-    font-size: 25px;
-    line-height: 50px;
-    transition: .5s;
-}
-footer .redes-sociales ul li .iconos:hover {
-    color: #ffffff;
-}
-footer .redes-sociales ul li a {
-    position: relative;
-     /*si quitas este display tammbién queda bien, es una manera de arreglar el error xd*/
+footer .redes-sociales ul li a img {
     width: 50px;
     height: 50px;
     border-radius: 50%;
+}
+footer .redes-sociales ul li a {
+    /* position: relative; */
+    /** Display flexbox para acomodar las imagenes de las redes sociales dentro del circulo blanco*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
     background-color: white;
-    text-align: center;
+    /* text-align: center; */
     transition: 0.5s;
-    transform: translate(0,0px);
+    transform: translate(0,0);
     box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
 }
 footer .redes-sociales ul li a:hover {
+    /* transform: rotate(0deg) skew(0deg) translate(0, -10px); */
     transform: rotate(0deg) skew(0deg) translate(0, -10px);
 }
-
 /** FACEBOOK color */
 footer .redes-sociales ul li:nth-child(1) a:hover {
-    background-color: #3b5999;
+    background-color: #3B5999;
 }
-
 /** TWITTER color */
 footer .redes-sociales ul li:nth-child(2) a:hover {
-    background-color: #55acee;
+    background-color: #55ACEE;
 }
-
 /** INSTAGRAM color */
 footer .redes-sociales ul li:nth-child(3) a:hover {
-    background-color: #e4405f;
+    background-color: #E4405F;
 }
-
 /** *******************************************/
-
 /** FOOTER-DATOS */
 footer .footer-datos {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
-
 footer .footer-datos h3 {
     color: white;
-    font-size: 25px;
+    font-size: 20px;
     padding-bottom: 18px;
 }
-
-
+footer .footer-datos ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
 footer .footer-datos ul li {
     list-style: none;
     padding-bottom: 15px;
     padding-left: 10px;
 }
-
 footer .footer-datos ul li a{
-    
-    color: #ffffff;
+    color: #FFFFFF;
     padding: 5px;
+    font-size: 12px;
     text-decoration: none;
 }
-
-
-/* .footer-datos {
-    transform : translateX(-50) transLateY(-50%);
-    }
-    .footer-datos ul li {
-        display: inline-block;
-    }
-    .footer-datos ul li {
-        text-decoration: none;
-        color: #fff
-    .footer-datos ul li a:after {
-        content: '';
-        display: block
-        widht: 0;
-        height: 2px;
-        background: #fff;
-        transition widht .3s
-    }
-    .footer-datos ul li a:hover:after {
-        widht : 100%
-        transition: widht .3s;
-    */
-
 footer .footer-datos ul li a:hover {
-        background: #8b9194;
+        background: #8B9194;
         transition: .5s;
         border-radius: 20px;
 }
-/* footer .footer-logotipo {
-    padding-right: 70px;
-} */
-
-
+/** ******************************************/
+/** LOGITIPO DIV - IMG */
+footer .footer-logotipo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 footer .footer-logotipo img {
     border-radius: 60px;
-    width: 130px;
-    height: 130px;
+    width: 100px;
+    height: 100px;
 }
-
-@media screen and (max-width:800px) {
-
-    footer .footer-datos {
-        font-size: 14px;
-        padding-left: 50px;
+/** ******************************************/
+/** SI LA MAXIMA ANCHURA DE LA PANTALLA ES 900PX */
+@media screen and (max-width:790px) {
+    footer .redes-sociales ul{
+        flex-direction: column;
     }
-
-    footer .footer-logotipo img {
-        width: 90px;
-        height: 90px;
-    }
-
-    footer .redes-sociales ul {
-        /* padding-left: 50px; */
-        width: 130px;
-        padding-top: 85px;
-    }
-
 }
 
