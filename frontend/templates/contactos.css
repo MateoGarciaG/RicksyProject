@@ -184,7 +184,7 @@ html {
     justify-content: space-around;
 }
 .parallax {
-    background: url(../resources/img/contacto2.jpg)
+    background: url(../resources/img/contactos/contacto2.jpg)
         repeat fixed 100%;
 }
 .parallax-inner {
