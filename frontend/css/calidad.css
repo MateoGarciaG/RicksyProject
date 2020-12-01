@@ -306,7 +306,7 @@ section ul li .section-description-calidad {
     opacity: 0;
     border-radius: 10%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-direction: column;
 
@@ -318,6 +318,7 @@ section ul li:hover .section-description-calidad {
     transition-delay: 0.5s;
     opacity: 1;
 }
+
 
 /** LOGOTIPO PRINCIPAL */
 
