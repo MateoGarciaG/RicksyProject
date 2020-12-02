@@ -1,0 +1,413 @@
+/** CALIDAD CSS */
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap');
+
+/** Aplicando la fuente importada y reduciendo el margin y padding*/
+* {
+    /* position: fixed;  */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+}
+
+
+
+/** ******************************************/
+
+/** HEADER - NAV */
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background: #225470;
+
+}
+
+/** Class Titulo con Logotipo */
+.titulo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-decoration: none;
+}
+
+.titulo h1 {
+    padding: 20px;
+    color: #edf0f1;
+    font-size: 40px;
+}
+
+/** Si el tamaño de la página es menor a 700px, colocame más pequeño el logotipo y el h1 */
+@media(max-width:900px){
+    .titulo h1 {
+        font-size: 25px;
+        /* padding-right: 20px; */
+    }
+
+    header nav li a {
+        font-weight: 500;
+        font-size: 15px;
+        color: #edf0f1;
+        text-decoration: none;
+        border-radius: 3px;
+    }
+
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+header nav li a {
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+/** Si pasas el mouse por algún enlace del NAV, se sombrea*/
+header nav li a:hover {
+    background: #8b9194;
+    transition: .5s;
+    padding: 6px;
+}
+
+/** LOGOTIPO */
+.logotipo {
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    margin-right: auto;
+    padding: 8px;
+    border-radius: 100px;
+}
+
+
+
+/** ******************************************/
+
+/** EN EL CASO DE QUE EL TAMAÑO DE LA PANTALLA SE REDUZCA, MEDIANTE @media
+** COLOCAME EL NAV EN UN "hamburguer NAV"
+*/
+
+
+
+
+nav .line{
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+}
+
+label #btn, label #cancel {
+    display: none;
+    color: white;
+    float: right;
+    margin-right: 40px;
+    cursor: pointer;
+
+}
+
+nav #check {
+    display: none;
+}
+
+@media screen and (max-width:800px) {
+
+    header {
+        /* position: fixed; */
+        top: 0;
+    }
+
+    label #btn {
+        display: block;
+    }
+
+
+    nav ul{
+        position: fixed;
+        width: 100%;
+        height: 55vh;
+        background: #225470;
+        top: 80px;
+        left: 100%;
+        text-align: center;
+        transition: all .5s;
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 15px;
+    }
+
+    nav #check:checked ~ ul {
+        left: 0;
+    }
+
+    nav #check:checked ~ label #btn {
+        display: none;
+    }
+
+    nav #check:checked ~ label #cancel {
+        display: block;
+    }
+
+    nav #check:checked ~ label #cancel img {
+        height: 80px;
+        width: 110px;
+    }
+
+
+}
+
+
+
+
+/** SECTION */
+/** *******************************************/
+
+section {
+    padding: 0px;
+    margin: 0px;
+}
+
+/** Section Titulo Gracias por su compra */
+section .section-titulo2 {
+    color: white;
+    padding: 40px;
+    text-align: center;
+    border-radius: 20px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 7px solid rgb(255, 255, 255);
+    background-image: url('../resources/img/compra/fondo_calidad1.jpg');
+    width: 600px;
+    height: 260px;
+    
+}
+
+section div .section-titulo2 h2 a{
+    color:white;
+    -webkit-text-stroke: 0.5px rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+
+/** LOGOTIPO PRINCIPAL */
+
+.main-logotipo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+}
+
+.main-logotipo img {
+    width: 200px;
+    height: 200px;
+    border-radius: 20%;
+    border: 5px solid rgb(255, 255, 255);
+}
+
+
+
+/** *******************************************/
+
+/** ******************************************/
+
+/** IMAGEN INTERMEDIA ENTRE SECTIONS SCROLLING */
+
+
+/** IMAGEN SCROLLING SECTION */
+.img-scroll-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100%;
+    /* opacity: 0.70; */
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 50px;
+    background-image: url('../resources/img/calidad/fondo_calidad2.jpg');
+}
+
+
+/** *******************************************/
+
+
+/** FOOTER */
+/** *******************************************/
+
+footer {
+    /* position: absolute; */
+    /* left:0px; */
+    /* bottom: 0px; */
+    width: 100%;
+    /* padding-right: 200px; */
+    background: #225470;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    margin: 0px;
+}
+
+.main-content .box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    margin: 0px;
+}
+
+/** REDES SOCIALES ICONOS */
+/** *******************************************/
+footer .redes-sociales {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .redes-sociales ul {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+footer .redes-sociales ul li {
+    list-style: none;
+    margin: 0 10px;
+    height: 60px;
+}
+
+
+footer .redes-sociales ul li a img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+footer .redes-sociales ul li a {
+    /* position: relative; */
+    /** Display flexbox para acomodar las imagenes de las redes sociales dentro del circulo blanco*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: white;
+    /* text-align: center; */
+    transition: 0.5s;
+    transform: translate(0,0);
+    box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
+}
+footer .redes-sociales ul li a:hover {
+    /* transform: rotate(0deg) skew(0deg) translate(0, -10px); */
+    transform: rotate(0deg) skew(0deg) translate(0, -10px);
+}
+
+
+/** FACEBOOK color */
+footer .redes-sociales ul li:nth-child(1) a:hover {
+    background-color: #3B5999;
+}
+/** TWITTER color */
+footer .redes-sociales ul li:nth-child(2) a:hover {
+    background-color: #55ACEE;
+}
+/** INSTAGRAM color */
+footer .redes-sociales ul li:nth-child(3) a:hover {
+    background-color: #E4405F;
+}
+
+
+/** *******************************************/
+/** FOOTER-DATOS */
+
+footer .footer-datos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+footer .footer-datos h3 {
+    color: white;
+    font-size: 20px;
+    padding-bottom: 18px;
+}
+
+footer .footer-datos ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer .footer-datos ul li {
+    list-style: none;
+    padding-bottom: 15px;
+    padding-left: 10px;
+}
+footer .footer-datos ul li a{
+    color: #FFFFFF;
+    padding: 5px;
+    font-size: 12px;
+    text-decoration: none;
+}
+footer .footer-datos ul li a:hover {
+        background: #8B9194;
+        transition: .5s;
+        border-radius: 20px;
+}
+
+
+/** ******************************************/
+/** LOGITIPO DIV - IMG */
+footer .footer-logotipo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .footer-logotipo img {
+    border-radius: 60px;
+    width: 100px;
+    height: 100px;
+}
+
+/** ******************************************/
+
+/** SI LA MAXIMA ANCHURA DE LA PANTALLA ES 900PX */
+@media screen and (max-width:790px) {
+
+    footer .redes-sociales ul{
+        flex-direction: column;
+        
+    }
+
+}
