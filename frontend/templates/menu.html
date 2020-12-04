@@ -10,33 +10,351 @@
         <title>carta</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="menu.css">
     </head>
     <body>
         <div style=></div>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <header class="header-carta"><h1></h1></header>
+        <!-- <header class="header-carta"><h1></h1></header>
         <script src="" async defer></script>
         <nav class="nav-menu"></nav>
-            <ul>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href="">inicioo</a></li>
+            <ul class="nav-menu-true">
+                <li><a href="">Index</a></li>
+                <li><a href="">Contactos</a></li>
+                <li><a href="">Calidad</a></li>
             </ul>
-            <main class="p-menu"> <!--meto las 9 imagenes aqui porque no se donde coño meterlas sino-->
-                <a href=""><img src=""></a>
-                <a href=""><img src=""></a>
-                <a href=""><img src=""></a>
-                <a href=""><img src=""></a>
-                <a href=""><img src=""></a>
-                <a href=""><img src=""></a>
-                <a href=""><img src=""></a>
-                <a href=""><img src=""></a>
-                <a href=""><img src=""></a>
-            </main>
-            <footer class="footer-menu"></footer>
-    </body>
+        </nav> -->
+
+
+        <header class="header-index">
+            <!--Enlace para Titulo y Logotipo-->
+        
+            <a href="index.html" class="titulo">
+                <img class="logotipo" src="../resources/img/logos/logo.png" alt="">
+
+                <h1>
+                    JummyFood
+                </h1>
+
+            </a>
+
+            <!--Burguer ICON para cuando el nav sea responsive, los enlaces se introduzcan aquí-->
+            <!-- <div class="burguer-nav"> -->
+                <!-- <input type="checkbox" id="nav-toggle" class="nav-toggle"> -->
+            <!-- </div> -->
+
+            <!--NAV-->
+            <nav>
+
+                <input type="checkbox" id="check">
+                <label for="check">
+                    <div id="btn">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+
+                    <div id="cancel">
+                        <img src="../resources/svg/simbolo_cerrar_menu.ico" alt="">
+                    </div>
+                </label>
+
+                <ul class="nav-ul">
+
+                    <li>
+                        <a href="menu.html">Menús</a>
+                    </li>
+
+                    <li>
+                        <a href="calidad.html">Calidad</a>
+                    </li>
+
+                    <li>
+                        <a href="contactos.html">Contacto</a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+        
+        </header>
+    
+    <section>
+
+    <div class="all-images">
+        <div class="p-menu"> <!--meto las 9 imagenes aqui porque no se donde coño meterlas sino-->
+            <div class="card">
+                <div class="card-contenido">
+                    <img class="imagenes-menu1" src="\imagenes\imagenes_menú\comida1.png" width="220" height="180">
+                    <div class="contenidor">
+                        <h3 class="titulo-menu">Lorem ipsum</h3>
+                        <p class="Descripcion-menu">Los sabores de la plebe</p>
+                        <br>
+                        <p class="precio">Precio incluido en el paquete<p></p>
+                            <br>
+                        <p class="ingredientes-menu">Que contiene:
+                        <ul class="">
+                            <li>Lorem lorem ipsum ipsum</li>
+                            <li>Lorem lorem lorem lorem</li>
+                            <li>Lorem ipsum ipsum ipsum</li>
+                            <li>Ipsum lorem lorem lorem</li>
+                        </ul>
+                        </p>
+                        <p class="tipo-menu">blabla</p>
+                    </div>
+                </div>
+            </div>
+                
+            <div class="card">
+                <div class="card-contenido">
+                    <img class="imagenes-menu1" src="\imagenes\imagenes_menú\comida2.png" width="220" height="180">
+                    <div class="contenidor">
+                        <h3 class="titulo-menu">Lorem ipsum</h3>
+                        <p class="Descripcion-menu">Los sabores de la plebe</p>
+                        <br>
+                        <p class="precio">Precio incluido en el paquete<p></p>
+                            <br>
+                        <p class="ingredientes-menu">Que contiene:
+                        <ul class="">
+                            <li>Lorem lorem ipsum ipsum</li>
+                            <li>Lorem lorem lorem lorem</li>
+                            <li>Lorem ipsum ipsum ipsum</li>
+                            <li>Ipsum lorem lorem lorem</li>
+                        </ul>
+                        </p>
+                        <p class="tipo-menu">blabla</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-contenido">
+                    <img class="imagenes-menu1" src="\imagenes\imagenes_menú\comida3.png" width="220" height="180">
+                    <div class="contenidor">
+                        <h3 class="titulo-menu">Lorem ipsum</h3>
+                        <p class="Descripcion-menu">Los sabores de la plebe</p>
+                        <br>
+                        <p class="precio">Precio incluido en el paquete<p></p>
+                            <br>
+                        <p class="ingredientes-menu">Que contiene:
+                        <ul class="">
+                            <li>Lorem lorem ipsum ipsum</li>
+                            <li>Lorem lorem lorem lorem</li>
+                            <li>Lorem ipsum ipsum ipsum</li>
+                            <li>Ipsum lorem lorem lorem</li>
+                        </ul>
+                        </p>
+                        <p class="tipo-menu">blabla</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--****************************************************************************************************************************-->
+    <div class="all-images">
+        <div class="p-menu2"> 
+            <div class="card">
+                <div class="card-contenido">
+                    <img class="imagenes-menu1" src="\imagenes\imagenes_menú\comida4.png" width="220" height="180">
+                    <div class="contenidor">
+                        <h3 class="titulo-menu">Lorem ipsum</h3>
+                        <p class="Descripcion-menu">Los sabores de la plebe</p>
+                        <br>
+                        <p class="precio">Precio incluido en el paquete<p></p>
+                            <br>
+                        <p class="ingredientes-menu">Que contiene:
+                        <ul class="">
+                            <li>Lorem lorem ipsum ipsum</li>
+                            <li>Lorem lorem lorem lorem</li>
+                            <li>Lorem ipsum ipsum ipsum</li>
+                            <li>Ipsum lorem lorem lorem</li>
+                        </ul>
+                        </p>
+                        <p class="tipo-menu">blabla</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-contenido">
+                    <img class="imagenes-menu1" src="\imagenes\imagenes_menú\comida5.png" width="220" height="180">
+                    <div class="contenidor">
+                        <h3 class="titulo-menu">Lorem ipsum</h3>
+                        <p class="Descripcion-menu">Los sabores de la plebe</p>
+                        <br>
+                        <p class="precio">Precio incluido en el paquete<p></p>
+                            <br>
+                        <p class="ingredientes-menu">Que contiene:
+                        <ul class="">
+                            <li>Lorem lorem ipsum ipsum</li>
+                            <li>Lorem lorem lorem lorem</li>
+                            <li>Lorem ipsum ipsum ipsum</li>
+                            <li>Ipsum lorem lorem lorem</li>
+                        </ul>
+                        </p>
+                        <p class="tipo-menu">blabla</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-contenido">
+                    <img class="imagenes-menu1" src="\imagenes\imagenes_menú\comida6.png" width="220" height="180">
+                    <div class="contenidor">
+                        <h3 class="titulo-menu">Lorem ipsum</h3>
+                        <p class="Descripcion-menu">Los sabores de la plebe</p>
+                        <br>
+                        <p class="precio">Precio incluido en el paquete<p></p>
+                            <br>
+                        <p class="ingredientes-menu">Que contiene:
+                        <ul class="">
+                            <li>Lorem lorem ipsum ipsum</li>
+                            <li>Lorem lorem lorem lorem</li>
+                            <li>Lorem ipsum ipsum ipsum</li>
+                            <li>Ipsum lorem lorem lorem</li>
+                        </ul>
+                        </p>
+                        <p class="tipo-menu">blabla</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--*****************************************************************-->
+
+    <div class="all-images">
+        <div class="p-menu3"> 
+            <div class="card">
+                <div class="card-contenido">
+                    <img class="imagenes-menu1" src="\imagenes\imagenes_menú\comida7.png" width="220" height="180">
+                    <div class="contenidor">
+                        <h3 class="titulo-menu">Lorem ipsum</h3>
+                        <p class="Descripcion-menu">Los sabores de la plebe</p>
+                        <br>
+                        <p class="precio">Precio incluido en el paquete<p></p>
+                            <br>
+                        <p class="ingredientes-menu">Que contiene:
+                        <ul class="">
+                            <li>Lorem lorem ipsum ipsum</li>
+                            <li>Lorem lorem lorem lorem</li>
+                            <li>Lorem ipsum ipsum ipsum</li>
+                            <li>Ipsum lorem lorem lorem</li>
+                        </ul>
+                        </p>
+                        <p class="tipo-menu">blabla</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-contenido">
+                    <img class="imagenes-menu1" src="\imagenes\imagenes_menú\comida8.png" width="220" height="180">
+                    <div class="contenidor">
+                        <h3 class="titulo-menu">Lorem ipsum</h3>
+                        <p class="Descripcion-menu">Los sabores de la plebe</p>
+                        <br>
+                        <p class="precio">Precio incluido en el paquete<p></p>
+                            <br>
+                        <p class="ingredientes-menu">Que contiene:
+                        <ul class="">
+                            <li>Lorem lorem ipsum ipsum</li>
+                            <li>Lorem lorem lorem lorem</li>
+                            <li>Lorem ipsum ipsum ipsum</li>
+                            <li>Ipsum lorem lorem lorem</li>
+                        </ul>
+                        </p>
+                        <p class="tipo-menu">blabla</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-contenido">
+                    <img class="imagenes-menu1" src="\imagenes\imagenes_menú\comida9.png" width="220" height="180">
+                    <div class="contenidor">
+                        <h3 class="titulo-menu">Lorem ipsum</h3>
+                        <p class="Descripcion-menu">Los sabores de la plebe</p>
+                        <br>
+                        <p class="precio">Precio incluido en el paquete<p></p>
+                            <br>
+                        <p class="ingredientes-menu">Que contiene:
+                        <ul class="">
+                            <li>Lorem lorem ipsum ipsum</li>
+                            <li>Lorem lorem lorem lorem</li>
+                            <li>Lorem ipsum ipsum ipsum</li>
+                            <li>Ipsum lorem lorem lorem</li>
+                        </ul>
+                        </p>
+                        <p class="tipo-menu">blabla</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </section>
+
+    <!--FOOTER-->
+    <footer>
+    
+        <div class="main-content">
+                <div class="redes-sociales box">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <img class="iconos" src="../resources/img/footer/fb.png" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img class="iconos" src="../resources/img/footer/twitter2.png" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img  class="iconos" src="../resources/img/footer/instagramm.png" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-datos box">
+                    <h3>Lorem Ipsum</h3>
+                    <ul>
+                        <li>
+                            <a href="#" alt="">Políticas de Empresa
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" alt="">Derechos de autor
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" alt="">Licencia inventada del año 2013
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" alt="">Lorem Lorem Ipsum Ipsum
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" alt="">Ipsum ipsum lorem lorem
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" alt="">Lorem Ipsum Ipsum Lorem
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-logotipo box">
+                    <a href="#">
+                    <img src="../resources/img/logos/logo_rickMorty.JPG">
+                    </a>
+                </div>
+        </div>      
+    </footer>
+</body>
 </html>

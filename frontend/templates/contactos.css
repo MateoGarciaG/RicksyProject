@@ -1,0 +1,408 @@
+/** CALIDAD CSS */
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap');
+
+/** Aplicando la fuente importada y reduciendo el margin y padding*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+    
+}
+
+
+/***********************************la barra de navegación****************************/
+
+/** ******************************************/
+
+/** ******************************************/
+
+/** HEADER - NAV */
+
+header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background: #225470;
+    padding-left: 30px;
+    padding-right: 20px;
+}
+
+/** Class Titulo con Logotipo */
+.titulo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.titulo h1 {
+    padding: 20px;
+    color: #edf0f1;
+    font-size: 40px;
+}
+
+/** Si el tamaño de la página es menor a 700px, colocame más pequeño el logotipo y el h1 */
+@media(max-width:700px){
+    .titulo h1 {
+        font-size: 20px;
+        padding-right: 20px;
+    }
+
+}
+
+li, a {
+    font-weight: 500;
+    font-size: 16px;
+    color: #edf0f1;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+/** Si pasas el mouse por algún enlace del NAV, se sombrea*/
+li a:hover {
+    background: #8b9194;
+    transition: .5s;
+    padding: 6px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+
+/** LOGOTIPO */
+.logotipo {
+    width: 90px;
+    height: 90px;
+    cursor: pointer;
+    margin-right: auto;
+    padding: 8px;
+    border-radius: 100px;
+}
+
+
+/** ******************************************/
+
+/** EN EL CASO DE QUE EL TAMAÑO DE LA PANTALLA SE REDUZCA, MEDIANTE @media
+** COLOCAME EL NAV EN UN "hamburguer NAV"
+*/
+
+
+
+
+.line{
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+}
+
+
+label #btn, label #cancel {
+    display: none;
+    color: white;
+    float: right;
+    margin-right: 40px;
+    cursor: pointer;
+
+}
+
+#check {
+    display: none;
+}
+
+@media screen and (max-width:800px) {
+
+    header {
+        position: fixed;
+        top: 0;
+    }
+
+    label #btn {
+        display: block;
+    }
+
+
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #225470;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 20px;
+    }
+
+    #check:checked ~ ul {
+        left: 0;
+    }
+
+    #check:checked ~ label #btn {
+        display: none;
+    }
+
+    #check:checked ~ label #cancel {
+        display: block;
+    }
+
+    #check:checked ~ label #cancel img {
+        height: 50px;
+        width: 70px;
+    }
+
+
+}
+/*********************************************************MAIN********************************************************************/
+html {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+.margin {
+    margin: 0% 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.parallax {
+    background: url(../resources/img/contactos/contacto2.jpg)
+        repeat fixed 100%;
+}
+.parallax-inner {
+    padding-top: 10%;
+    padding-bottom: 10%;
+    display: flex;
+    justify-content: center;
+}
+.panel1 {
+    background-color: indigo;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+}
+.panel1 img {
+    border-radius: 25px;
+    border-style: double;
+}
+.texto {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    justify-content: space-around;
+    
+}
+.texto img {
+    display: flex;
+    justify-content: flex-end;
+
+}
+.panel2 {
+    background-color: indigo;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.texto2 img {
+    padding: 20px;
+}
+.texto2 {
+    padding: 20px
+}
+.texto2 h4 {
+    display: inline-block;
+    position: relative;
+    color: ivory;
+    padding: 2%;
+}
+.texto2 h4::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+.texto2 h4:hover::after{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+.horario {
+    padding: 20px;
+}
+.horas, .horas li {
+    padding: 10px;
+}
+
+.maps iframe {
+    padding-top: 15px;
+}
+.maps h5 {
+    color: ivory;
+}
+.panel2 iframe {
+    border-radius: 35px;
+    border-style: double;
+}
+
+
+
+
+/** FOOTER */
+/** *******************************************/
+footer {
+    /* position: absolute; */
+    /* left:0px; */
+    /* bottom: 0px; */
+    width: 100%;
+    /* padding-right: 200px; */
+    background: #225470;
+}
+.main-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    margin: 0px;
+}
+.main-content .box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    margin: 0px;
+}
+/** REDES SOCIALES ICONOS */
+/** *******************************************/
+footer .redes-sociales {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .redes-sociales ul {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .redes-sociales ul li {
+    list-style: none;
+    margin: 0 10px;
+    height: 60px;
+}
+footer .redes-sociales ul li a img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+footer .redes-sociales ul li a {
+    /* position: relative; */
+    /** Display flexbox para acomodar las imagenes de las redes sociales dentro del circulo blanco*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: white;
+    /* text-align: center; */
+    transition: 0.5s;
+    transform: translate(0,0);
+    box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
+}
+footer .redes-sociales ul li a:hover {
+    /* transform: rotate(0deg) skew(0deg) translate(0, -10px); */
+    transform: rotate(0deg) skew(0deg) translate(0, -10px);
+}
+/** FACEBOOK color */
+footer .redes-sociales ul li:nth-child(1) a:hover {
+    background-color: #3B5999;
+}
+/** TWITTER color */
+footer .redes-sociales ul li:nth-child(2) a:hover {
+    background-color: #55ACEE;
+}
+/** INSTAGRAM color */
+footer .redes-sociales ul li:nth-child(3) a:hover {
+    background-color: #E4405F;
+}
+/** *******************************************/
+/** FOOTER-DATOS */
+footer .footer-datos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+footer .footer-datos h3 {
+    color: white;
+    font-size: 20px;
+    padding-bottom: 18px;
+}
+footer .footer-datos ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+footer .footer-datos ul li {
+    list-style: none;
+    padding-bottom: 15px;
+    padding-left: 10px;
+}
+footer .footer-datos ul li a{
+    color: #FFFFFF;
+    padding: 5px;
+    font-size: 12px;
+    text-decoration: none;
+}
+footer .footer-datos ul li a:hover {
+        background: #8B9194;
+        transition: .5s;
+        border-radius: 20px;
+}
+/** ******************************************/
+/** LOGITIPO DIV - IMG */
+footer .footer-logotipo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .footer-logotipo img {
+    border-radius: 60px;
+    width: 100px;
+    height: 100px;
+}
+/** ******************************************/
+/** SI LA MAXIMA ANCHURA DE LA PANTALLA ES 900PX */
+@media screen and (max-width:790px) {
+    footer .redes-sociales ul{
+        flex-direction: column;
+    }
+}
+
