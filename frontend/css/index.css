@@ -291,19 +291,19 @@ label #btn, label #cancel {
 }
 
 .img-scrolling1 {
-    background-image: url('../resources/img/food_planets.jpg');
+    background-image: url('../resources/img/index/food_planets.jpg');
 }
 
 .img-scrolling2 {
-    background-image: url('../resources/img/cosecha.jpg')
+    background-image: url('../resources/img/index/cosecha.jpg')
 }
 
 .img-scrolling3 {
-    background-image: url('../resources/img/space_around.jpg');
+    background-image: url('../resources/img/index/space_around.jpg');
 }
 
 .img-scrolling4 {
-    background-image: url('../resources/img/space_planets_minimalist.jpg');
+    background-image: url('../resources/img/index/space_planets_minimalist.jpg');
 }
 
 /** *******************************************/
