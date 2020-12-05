@@ -1,6 +1,6 @@
 
-
-def find():
+def get_html_content(url):
+    
     return None
 
 if __name__ == "__main__":
