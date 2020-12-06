@@ -1,5 +1,5 @@
 
-from src.content_page.content_html import get_html_content
+from backend.src.content_page.content_html import get_html_content
 
 
 def test_get_html_content_exceptions():
