@@ -1,7 +1,7 @@
 
 from src.content_page.content_html import get_html_content
 #* FUNTIONS WEB SCRAPPING MODULE IMPORT
-from src.scrapping.scrapping import  get_scrapping_content, find_content, get_all_labels, remove_label, get_content_attribute
+from src.scrapping.scrapping import  get_scrapping_content, find_content, get_all_labels, get_content_attribute
 
 #* HTML_STRING: Contiene el string del html de comida1.html para realizar los casos test correctamente
 html_string = get_html_content('https://mateogarciag.github.io/Project-dual-website/comida1.html')
@@ -9,7 +9,7 @@ html_string = get_html_content('https://mateogarciag.github.io/Project-dual-webs
 def test_get_scrapping_content():
     
     assert get_scrapping_content('') == None
-    assert get_scrapping_content(get_html_content('https://mateogarciag.github.io/Project-dual-website/comida1.html')) == {'titulo': ' MENÚ: ', 'descriptionMenu': ' Desde los rincones más profundos del espacio, este menú está hecho de ', 'stock': 30, 'price': 'PRECIO: 10,00', 'ingredients': ['Carne de Marte', 'Lechuga de Jupiter', 'Tomate de Pluton'], 'category': ' Comida Chatarra '}
+    assert get_scrapping_content(get_html_content('https://mateogarciag.github.io/Project-dual-website/comida1.html')) == {'titulo': 'MENÚ:', 'descriptionMenu': 'Desde los rincones más profundos del espacio, este menú está hecho de', 'stock': 30, 'price': '10,00', 'ingredients': ['Carne de Marte', 'Lechuga de Jupiter', 'Tomate de Pluton'], 'category': 'Comida Chatarra'}
     # assert get_scrapping_content(get_html_content('https://mateogarciag.github.io/Project-dual-website/comida2.html')) == {
     #     "name": "Alien Burguer",
     #     "price": 10.00,
@@ -39,12 +39,12 @@ def test_get_scrapping_content():
 
 def test_find_content():
     
-    assert find_content(html_string, 'input', id_label='stock-menu',attribute='value') == ['30']
-    assert find_content(html_string, 'p', class_label='descripcion-menu') == [' Desde los rincones más profundos del espacio, este menú está hecho de ']
-    assert find_content(html_string, 'p', class_label='tipo-menu') == [' Comida Chatarra ']
-    assert find_content(html_string, 'img', attribute='src') == ['resources/img/calidad/logo.png', 'resources/svg/simbolo_eliminar_44.svg', '../resources/svg/escritoriomenu_icono2.ico', 'resources/img/menu/comida1.png', 'resources/img/social_media/fb.png', 'resources/img/social_media/twitter2.png', 'resources/img/social_media/instagramm.png', 'resources/img/calidad/logo_rickMorty.JPG']
-    assert find_content(html_string, 'div', id_label='cancel') == [' <img src="resources/svg/simbolo_eliminar_44.svg" alt=""> ']
-    assert find_content(html_string, 'button', class_label='section-calidad-boton') == [' <a href="compra.html">PEDIR</a> ']
+    assert find_content(html_string, '<input type="hidden" id="stock-menu" value="30">', attribute='value') == ['30']
+    assert find_content(html_string, '"titulo-menu">', second_content='</h3>') == ['MENÚ:']
+    assert find_content(html_string, 'class="precio">', second_content='</p>') == ['PRECIO: 10,00$']
+    assert find_content(html_string, 'class="tipo-menu">', second_content='</p>') == ['Comida Chatarra']
+    assert find_content(html_string, 'id="cancel">', second_content='</div>') == ['<img src="resources/svg/simbolo_eliminar_44.svg" alt="">']
+    assert find_content(html_string, 'class="section-calidad-boton">', second_content='</button>') == ['<a href="compra.html">PEDIR</a>']
 
 
 def test_get_all_labels():
@@ -57,14 +57,6 @@ def test_get_all_labels():
     
     assert get_all_labels(html_string, 'a') == ['<a href="index.html" class="titulo"> <img class="logotipo" src="resources/img/calidad/logo.png" alt=""> <h1> JummyFood </h1> </a>', '<a href="menu.html">Menús</a>', '<a href="calidad.html">Calidad</a>', '<a href="contactos.html">Contacto</a>', '<a href="compra.html">PEDIR</a>', '<a href=""> <img class="iconos" src="resources/img/social_media/fb.png" alt=""> </a>', '<a href=""> <img class="iconos" src="resources/img/social_media/twitter2.png"> </a>', '<a href=""> <img class="iconos" src="resources/img/social_media/instagramm.png" alt=""> </a>', '<a href="#" alt="">Políticas de Empresa </a>', '<a href="#" alt="">Derechos de autor </a>', '<a href="#" alt="">Licencia inventada del año 2013 </a>', '<a href="#" alt="">Lorem Lorem Ipsum Ipsum </a>', '<a href="#" alt="">Ipsum ipsum lorem lorem </a>', '<a href="#" alt="">Lorem Ipsum Ipsum Lorem </a>', '<a href="#"> <img src="resources/img/calidad/logo_rickMorty.JPG"> </a>']
     
-def test_remove_label():
-    
-    assert remove_label('<p class="descripcion-menu"> Desde los rincones más profundos del espacio, este menú está hecho de </p>', 'p', class_label='descripcion-menu') == ' Desde los rincones más profundos del espacio, este menú está hecho de '
-    assert  remove_label('<h3 class="titulo-menu"> MENÚ: </h3>', 'h3', class_label='titulo-menu') == ' MENÚ: '
-    assert remove_label('<li>Tomate de Pluton</li>', 'li') == 'Tomate de Pluton'
-    assert remove_label('<img class="logotipo" src="resources/img/calidad/logo.png" alt="">', 'img') == 'This label has not its close label, it\'s one label type'
-    assert remove_label('<a href="#"> <img src="resources/img/calidad/logo_rickMorty.JPG"> </a>', 'a') == ' <img src="resources/img/calidad/logo_rickMorty.JPG"> '
-    assert remove_label('<h3 class="titulo-menu"> MENÚ: </h3>', 'h3', class_label='cualquier-clase') == 'There is no class or id with that value on this label'
     
 def test_get_content_attribute():
     
