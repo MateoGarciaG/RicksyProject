@@ -1,7 +1,7 @@
 
 from src.content_page.content_html import get_html_content
 #* FUNTIONS WEB SCRAPPING MODULE IMPORT
-# from src.scrapping.scrapping import  get_scrapping_content, find_content, get_all_labels, remove_label, get_content_attribute
+from src.scrapping.scrapping import  get_scrapping_content, find_content, get_all_labels, remove_label, get_content_attribute
 
 #* HTML_STRING: Contiene el string del html de comida1.html para realizar los casos test correctamente
 html_string = get_html_content('https://mateogarciag.github.io/Project-dual-website/comida1.html')
