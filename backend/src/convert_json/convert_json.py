@@ -4,10 +4,11 @@ import json
 myRecord = {
     "name": "Jay",
     "Age": 99,
-    "Occupation": "Unemployeed"
+    "Occupation": "Unemployeed",
+    "sucio": "pito"
 }
 
-def convert_json(myRecord, filename):
+def convert_json(myRecord):
     
     assert isinstance(myRecord, dict)
     assert isinstance(filename, str)
