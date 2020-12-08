@@ -23,7 +23,7 @@ def get_html_content(url):
             mensaje = 'Invalid URL, try another'
             
         except requests.exceptions.MissingSchema as no_http:
-            mensaje = f'There\'s no protocol HTTP/s in URL, Invalid URL \'{url}\': No schema supplied. Perhaps you mean: \'http://{url}\''
+            mensaje = f'There\'s no protocol HTTP/s in URL, Invalid URL \'{url}\': No schema supplied. Perhaps you mean: \'https://{url}\''
             
         except requests.exceptions.HTTPError as error_http:
             mensaje = f'There was a HTPP Error'
@@ -50,6 +50,6 @@ def get_html_content(url):
 
 
 
-if __name__ == "__main__":
-    # print(get_html_content('google.com'))
-    pass
+# if __name__ == "__main__":
+#     print(get_html_content('mateogarciag.github.io/Project-dual-website/'))
+    
