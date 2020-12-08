@@ -4,6 +4,54 @@
     WEB SCRAPPING MODULE
 """
 
+import requests
+
+def get_html_content(url):
+    
+    #* PRECONDITIONAL
+    assert isinstance(url, str) == True
+    
+    content_page = ''
+    mensaje = ''
+    
+    if url != '':
+        
+        try:
+            
+            if '.' in url:
+                page = requests.get(url)
+            
+            else:
+                raise requests.exceptions.InvalidURL
+
+        except requests.exceptions.InvalidURL as req:
+            mensaje = 'Invalid URL, try another'
+            
+        except requests.exceptions.MissingSchema as no_http:
+            mensaje = f'There\'s no protocol HTTP/s in URL, Invalid URL \'{url}\': No schema supplied. Perhaps you mean: \'https://{url}\''
+            
+        except requests.exceptions.HTTPError as error_http:
+            mensaje = f'There was a HTPP Error'
+            
+        except requests.exceptions.ConnectionError as con_error:
+            mensaje = f'There was a Conection Error'
+            
+        except Exception as exc:
+            mensaje = exc.args
+        
+        else:
+            
+            #* POSTCONDITIONAL
+            assert page.status_code == 200
+            
+            content_page = page.text
+            
+            return content_page
+
+    else:
+        return None
+    
+    return mensaje
 
 def get_all_labels(html_string, label):
     
@@ -234,4 +282,18 @@ def find_content(html_string, first_content, second_content='', attribute=''):
 
 if __name__ == "__main__":
     
-    pass
+    html_string = get_html_content('https://mateogarciag.github.io/Project-dual-website/comida1.html')
+    
+    # labels = get_all_labels(html_string, 'a')
+    
+    # print(labels)
+    
+    find = find_content(html_string, 'class="section-calidad-boton">', second_content='</button>')
+    
+    print(find)
+    
+    # menu1 = get_scrapping_content(html_string)
+    
+    # print(menu1)
+    
+    
