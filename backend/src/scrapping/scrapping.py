@@ -4,54 +4,6 @@
     WEB SCRAPPING MODULE
 """
 
-import requests
-
-def get_html_content(url):
-    
-    #* PRECONDITIONAL
-    assert isinstance(url, str) == True
-    
-    content_page = ''
-    mensaje = ''
-    
-    if url != '':
-        
-        try:
-            
-            if '.' in url:
-                page = requests.get(url)
-            
-            else:
-                raise requests.exceptions.InvalidURL
-
-        except requests.exceptions.InvalidURL as req:
-            mensaje = 'Invalid URL, try another'
-            
-        except requests.exceptions.MissingSchema as no_http:
-            mensaje = f'There\'s no protocol HTTP/s in URL, Invalid URL \'{url}\': No schema supplied. Perhaps you mean: \'https://{url}\''
-            
-        except requests.exceptions.HTTPError as error_http:
-            mensaje = f'There was a HTPP Error'
-            
-        except requests.exceptions.ConnectionError as con_error:
-            mensaje = f'There was a Conection Error'
-            
-        except Exception as exc:
-            mensaje = exc.args
-        
-        else:
-            
-            #* POSTCONDITIONAL
-            assert page.status_code == 200
-            
-            content_page = page.text
-            
-            return content_page
-
-    else:
-        return None
-    
-    return mensaje
 
 def get_all_labels(html_string, label):
     
@@ -249,13 +201,13 @@ def find_content(html_string, first_content, second_content='', attribute=''):
     for item_result in result:
         
         item_result_clean = item_result.split('\n')
-        print(item_result_clean)
+        # print(item_result_clean)
         
         item_result_clean = ''.join(item_result_clean)
-        print(item_result_clean)
+        # print(item_result_clean)
         
         item_result_clean = item_result_clean.split(' ')
-        print(item_result_clean)
+        # print(item_result_clean)
         
         for elem in item_result_clean:
             # if elem.isalnum() == False:
@@ -282,7 +234,9 @@ def find_content(html_string, first_content, second_content='', attribute=''):
 
 if __name__ == "__main__":
     
-    html_string = get_html_content('https://mateogarciag.github.io/Project-dual-website/comida4.html')
+    pass
+    
+    # html_string = get_html_content('https://mateogarciag.github.io/Project-dual-website/comida1.html')
     
     # labels = get_all_labels(html_string, 'a')
     
@@ -292,8 +246,8 @@ if __name__ == "__main__":
     
     # print(find)
     
-    menu1 = get_scrapping_content(html_string)
+    # menu1 = get_all_labels(html_string, 'A')
     
-    print(menu1)
+    # print(menu1)
     
     

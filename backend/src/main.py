@@ -1,64 +1,76 @@
 
 #* MODULES
 #* DATABASE MODULE
-from src.database.db_conection import connetion
-from bson.json_util import dumps
+# from src.database.db_conection import connetion
+# from bson.json_util import dumps
 
 #* REQUEST - CONTENT_PAGE MODULE
-from src.content_page.content_html import get_html_content
+from content_page.content_html import get_html_content
 
 #* CONVERT TO JSON MODULE
-
+from convert_json.convert_json import convert_json
 
 #* CRAWEL MODULE
-
+from crawler.crawling import crawl_web
 
 #* WEB SCRAPPING MODULE
-from src.scrapping.scrapping import get_scrapping_content
+from scrapping.scrapping import get_scrapping_content
+from bson.json_util import dumps
+
+
+#*************************************************************
 
 
 def execute_program():
     
-    #* CONTENT_PAGE SECTION
-    
     
     #* CRAWLER SECTION
     
-    
+    links_menus_web = crawl_web('https://mateogarciag.github.io/Project-dual-website')
     
     #* WEB SCRAPPING SECTION
     
     result_scrapping = []
     
-    for link in links_web:
-    
+    for link in links_menus_web:
+        
+        #* CONTENT_PAGE SECTION REQUEST
         html_string = get_html_content(link)
         
         dict_scrapping = get_scrapping_content(html_string)
         
         result_scrapping.append(dict_scrapping)
-        
+    
     
     #* CONVERT TO JSON SECTION
-    
+    convert_to_json = convert_json(result_scrapping, 'datos')
     
     #* MONGODB SECTION
-    client = connetion()
+    # client = connetion()              
 
-    db_project = client['project_menus']
-    menus_collection = db_project['menus']
+    # db_project = client['project_menus']
+    # menus_collection = db_project['menus']
     
-    #* insert menus on database
-    insert_menus = menus_collection.insert_many(result_scrapping)
+    # #* insert menus on database
+    # insert_menus = menus_collection.insert_many(result_scrapping)
     
-    #* Get all documents of menus
-    find_menus = menus_collection.find({}, {"_id":0})
+    # #* Get all documents of menus
+    # find_menus = menus_collection.find({}, {"_id":0})
     
-    #*Imprimir resultado con documentos
-    print(dumps(find_menus, indent=2))
+    # #*Imprimir resultado con documentos
+    # print(dumps(find_menus, indent=2))
+    
 
 
 if __name__ == "__main__":
     
     #* Ejecuta el programa
-    execute_program()
+    dicctionaries_menus = execute_program()
+    
+    for menus in dicctionaries_menus:
+        
+        # print(menus)
+        
+        print(dumps(menus, indent=2))
+        
+        print('*'*50)

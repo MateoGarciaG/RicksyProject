@@ -4,7 +4,7 @@ import json
 def convert_json(myRecord, filename):
     
     #* PRECONDICIONALES
-    assert isinstance(myRecord, dict)
+    assert isinstance(myRecord, list)
     assert isinstance(filename, str)
     
     mensaje = f"El diccionario ha sido convertido a json en este archivo: {filename}.json"
