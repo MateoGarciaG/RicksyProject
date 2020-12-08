@@ -60,4 +60,5 @@ def execute_program():
 
 if __name__ == "__main__":
     
+    #* Ejecuta el programa
     execute_program()

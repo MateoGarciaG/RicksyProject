@@ -282,18 +282,18 @@ def find_content(html_string, first_content, second_content='', attribute=''):
 
 if __name__ == "__main__":
     
-    html_string = get_html_content('https://mateogarciag.github.io/Project-dual-website/comida1.html')
+    html_string = get_html_content('https://mateogarciag.github.io/Project-dual-website/comida4.html')
     
     # labels = get_all_labels(html_string, 'a')
     
     # print(labels)
     
-    find = find_content(html_string, 'class="section-calidad-boton">', second_content='</button>')
+    # find = find_content(html_string, 'class="section-calidad-boton">', second_content='</button>')
     
-    print(find)
+    # print(find)
     
-    # menu1 = get_scrapping_content(html_string)
+    menu1 = get_scrapping_content(html_string)
     
-    # print(menu1)
+    print(menu1)
     
     
