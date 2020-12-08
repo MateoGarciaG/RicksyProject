@@ -171,6 +171,7 @@ def get_scrapping_content(html_string):
     
     #* POSTCONDITIONAL
     assert isinstance(menu_content, dict) == True
+    assert menu_content is not {}
     
     return menu_content
         
