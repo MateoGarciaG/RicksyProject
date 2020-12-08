@@ -1,11 +1,20 @@
-from src.convert_json.convert_json import convert_json, myRecord
+from src.convert_json.convert_json import convert_json
+from src.scrapping.scrapping import get_scrapping_content
+from src.content_page.content_html import get_html_content
+
 
 def test_convert_json():
-    # assert convert_json(myRecord) == "Decoding json ha fallado"
-    # assert convert_json(myRecord) == "Archivo no encontrado"
-    assert convert_json(myRecord, "datos") == "El diccionario ha sido convertido a json en este archivo: datos.json"
-    assert convert_json(myRecord2, "datos") == "El diccionario ha sido convertido a json en este archivo: datos.json"
-    assert convert_json(myRecord3, "datos") == "El diccionario ha sido convertido a json en este archivo: datos.json"
+    
+    links = ['https://mateogarciag.github.io/Project-dual-website/comida1.html', 'https://mateogarciag.github.io/Project-dual-website/comida2.html', 'https://mateogarciag.github.io/Project-dual-website/comida3.html']
+    
+    dict_menus = []
+    for link in links:
+        html_string = get_html_content(link)
+        dict_menus.append(get_scrapping_content(html_string))
+    
+    assert convert_json(dict_menus[0], "datos") == "El diccionario ha sido convertido a json en este archivo: datos.json"
+    assert convert_json(dict_menus[1], "datos") == "El diccionario ha sido convertido a json en este archivo: datos.json"
+    assert convert_json(dict_menus[2], "datos") == "El diccionario ha sido convertido a json en este archivo: datos.json"
 
 
 
