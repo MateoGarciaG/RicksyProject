@@ -3,7 +3,6 @@
 requests
 
 #* linter
-pep8
 autopep8
 
 #* database
