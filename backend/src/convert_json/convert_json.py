@@ -1,17 +1,12 @@
 import json
 # se importa un diccionario
 
-myRecord = {
-    "name": "Jay",
-    "Age": 99,
-    "Occupation": "Unemployeed",
-    "sucio": "pito"
-}
-
-def convert_json(myRecord):
+def convert_json(myRecord, filename):
     
+    #* PRECONDICIONALES
     assert isinstance(myRecord, dict)
     assert isinstance(filename, str)
+    
     mensaje = f"El diccionario ha sido convertido a json en este archivo: {filename}.json"
     try:
         j = json.dumps(myRecord)
@@ -25,8 +20,7 @@ def convert_json(myRecord):
         mensaje = "Archivo no encontrado"
     except Exception as exc:
         print("Ha ocurrido un error: ", exc.args)
+        
     return mensaje
-# de postcondición no se cual poner(pensar)
-file_json = convert_json(myRecord)
 
 

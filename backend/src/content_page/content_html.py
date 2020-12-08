@@ -51,5 +51,4 @@ def get_html_content(url):
 
 
 if __name__ == "__main__":
-    # print(get_html_content('google.com'))
     pass
