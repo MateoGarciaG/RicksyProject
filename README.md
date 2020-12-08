@@ -10,11 +10,6 @@ Para ejecuta el programa podemos ejecutar el archivo desde la terminal o desde e
 ```
 adria@DESKTOP-OSU69DN MINGW64 ~/Escritorio/proyecto_diciembre/RicksyProject$ python main.py
 ```
-TERMINAL
-
-![Alt text] (/frontend/resources/img/readme/Screenshot_1.png)
-
-CLICK DERECHO EN ARCHIVO
 
 ### Virtual environment
 En este proyecto también hemos hecho uso de un entorno virtual que se crean de esta manera:
