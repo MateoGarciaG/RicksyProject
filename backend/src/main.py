@@ -59,7 +59,7 @@ def execute_program():
     
     # #*Imprimir resultado con documentos
     # print(dumps(find_menus, indent=2))
-    
+    return result_scrapping
 
 
 if __name__ == "__main__":
@@ -69,8 +69,8 @@ if __name__ == "__main__":
     
     for menus in dicctionaries_menus:
         
-        # print(menus)
+        print(menus)
         
-        print(dumps(menus, indent=2))
+        # print(dumps(menus, indent=2))
         
         print('*'*50)
