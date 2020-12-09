@@ -6,19 +6,19 @@ DATABASE MODULE
 import  pymongo
 
 
-def connetion(user='m001-student', password='m001-mongodb-basics'):
+def connection(user='m001-student', password='m001-mongodb-basics'):
     
     try:
         
         MONGO_URL_ATLAS = f'mongodb+srv://{user}:{password}@sandbox.dec55.mongodb.net/?retryWrites=true&w=majority'
-        mongo = pymongo.MongoClient(MONGO_URL_ATLAS, ssl_cert_reqs=False)
+        mongo = pymongo.MongoClient(MONGO_URL_ATLAS, tlsAllowInvalidCertificates=False)
         
     except pymongo.errors.ConnectionFailure as conn_error:
         print("ERROR - Cannot connect to DataBase", conn_error)
     else:
-        print('Correct Conection!!')
+        print('Correct Connection!!')
     
-    return mongo 
+    return mongo
 
 # def choose_collection(db, collection):
     

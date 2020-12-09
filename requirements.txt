@@ -5,8 +5,8 @@ requests
 autopep8
 
 #* database
-pymongo
-dnspython
+pymongo[srv]
+#* dnspython
 
 #* TEST
 pytest

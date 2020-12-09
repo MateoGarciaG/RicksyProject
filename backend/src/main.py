@@ -1,7 +1,7 @@
 
 #* MODULES
 #* DATABASE MODULE
-from database.db_conection import connetion
+from database.db_conection import connection
 from bson.json_util import dumps
 
 #* REQUEST - CONTENT_PAGE MODULE
@@ -15,7 +15,6 @@ from crawler.crawling import crawl_web
 
 #* WEB SCRAPPING MODULE
 from scrapping.scrapping import get_scrapping_content
-from bson.json_util import dumps
 
 
 #*************************************************************
@@ -46,7 +45,7 @@ def execute_program():
     
     
     #* MONGODB SECTION
-    client = connetion()              
+    client = connection()              
 
     try:
         db_project = client['project_menus']
@@ -62,6 +61,9 @@ def execute_program():
         # print(dumps(find_menus, indent=2))
     except Exception as err:
         print('ERROR: ', err.args)
+    
+    else:
+        print('Se ha insertado correctamente!!')
     
     
     return result_scrapping
