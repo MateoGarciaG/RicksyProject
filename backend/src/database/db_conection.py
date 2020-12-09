@@ -20,6 +20,8 @@ def connection(user='m001-student', password='m001-mongodb-basics'):
     
     return mongo
 
+
+
 # def choose_collection(db, collection):
     
 #     collection = db[f'{collection}']
