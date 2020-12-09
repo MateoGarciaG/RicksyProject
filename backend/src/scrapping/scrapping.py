@@ -143,7 +143,7 @@ def get_scrapping_content(html_string):
         price = find_content(html_string, 'class="precio">', second_content='</p>')[0]
         first_position_price = price.find(' ')
         last_position_price = price.find('$', first_position_price+1)
-        new_price = price[first_position_price+1:last_position_price]
+        new_price = float(price[first_position_price+1:last_position_price])
         
         ingredients = find_content(html_string, 'class="ingredientes-menu">', second_content='</p>')[0]
         ingredients_li = get_all_labels(ingredients, 'li')

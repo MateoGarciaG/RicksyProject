@@ -5,6 +5,7 @@ DATABASE MODULE
 
 import  pymongo
 
+
 def connetion(user='m001-student', password='m001-mongodb-basics'):
     
     try:

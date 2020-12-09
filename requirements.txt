@@ -6,6 +6,7 @@ autopep8
 
 #* database
 pymongo
+dnspython
 
 #* TEST
 pytest

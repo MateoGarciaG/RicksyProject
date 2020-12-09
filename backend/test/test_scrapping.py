@@ -9,13 +9,13 @@ html_string = get_html_content('https://mateogarciag.github.io/Project-dual-webs
 def test_get_scrapping_content():
     
     assert get_scrapping_content('') == None
-    assert get_scrapping_content(get_html_content('https://mateogarciag.github.io/Project-dual-website/comida1.html')) == {'titulo': 'ANDROMEDA', 'descriptionMenu': 'Andromeda és el mejor menú de este lado del universo.', 'stock': 30, 'price': '9.99', 'ingredients': ['Carne de Marte', 'Lechuga de Jupiter', 'Tomate de Pluton'], 'category': 'Comida Chatarra'}
+    assert get_scrapping_content(get_html_content('https://mateogarciag.github.io/Project-dual-website/comida1.html')) == {'titulo': 'ANDROMEDA', 'descriptionMenu': 'Andromeda és el mejor menú de este lado del universo.', 'stock': 30, 'price': 9.99, 'ingredients': ['Carne de Marte', 'Lechuga de Jupiter', 'Tomate de Pluton'], 'category': 'Comida Chatarra'}
     
-    assert get_scrapping_content(get_html_content('https://mateogarciag.github.io/Project-dual-website/comida2.html')) =={'titulo': 'MILKYWAY', 'descriptionMenu': 'Sabores exóticos desde lugares desconocidos.', 'stock': 30, 'price': '8.99', 'ingredients': ['Patata de Andromeda', 'Lechuga de Jupiter', 'Sustancia 0'], 'category': 'Comida Chatarra'}
+    assert get_scrapping_content(get_html_content('https://mateogarciag.github.io/Project-dual-website/comida2.html')) =={'titulo': 'MILKYWAY', 'descriptionMenu': 'Sabores exóticos desde lugares desconocidos.', 'stock': 30, 'price': 8.99, 'ingredients': ['Patata de Andromeda', 'Lechuga de Jupiter', 'Sustancia 0'], 'category': 'Comida Chatarra'}
     
-    assert get_scrapping_content(get_html_content('https://mateogarciag.github.io/Project-dual-website/comida3.html')) == {'titulo': 'MAKO', 'descriptionMenu': 'Este menú te dara la energía necesaria para destruir un planeta.', 'stock': 30, 'price': '4.99', 'ingredients': ['Pipas de la tierra', 'Gelatina de lenteja', 'Tomate de Pluton'], 'category': 'Comida Chatarra'}
+    assert get_scrapping_content(get_html_content('https://mateogarciag.github.io/Project-dual-website/comida3.html')) == {'titulo': 'MAKO', 'descriptionMenu': 'Este menú te dara la energía necesaria para destruir un planeta.', 'stock': 30, 'price': 4.99, 'ingredients': ['Pipas de la tierra', 'Gelatina de lenteja', 'Tomate de Pluton'], 'category': 'Comida Chatarra'}
     
-    assert get_scrapping_content(get_html_content('https://mateogarciag.github.io/Project-dual-website/comida4.html')) == {'titulo': 'FUNKI', 'descriptionMenu': 'Baila al ritmo de los espamos que provoca este menú.', 'stock': 30, 'price': '5.99', 'ingredients': ['Tofu de Vega', 'Lechuga de Jupiter', 'Quarzo deshidratado'], 'category': 'Comida Chatarra'}
+    assert get_scrapping_content(get_html_content('https://mateogarciag.github.io/Project-dual-website/comida4.html')) == {'titulo': 'FUNKI', 'descriptionMenu': 'Baila al ritmo de los espamos que provoca este menú.', 'stock': 30, 'price': 5.99, 'ingredients': ['Tofu de Vega', 'Lechuga de Jupiter', 'Quarzo deshidratado'], 'category': 'Comida Chatarra'}
     
 
 

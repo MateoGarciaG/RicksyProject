@@ -1,8 +1,8 @@
 
 #* MODULES
 #* DATABASE MODULE
-# from src.database.db_conection import connetion
-# from bson.json_util import dumps
+from database.db_conection import connetion
+from bson.json_util import dumps
 
 #* REQUEST - CONTENT_PAGE MODULE
 from content_page.content_html import get_html_content
@@ -39,27 +39,35 @@ def execute_program():
         
         dict_scrapping = get_scrapping_content(html_string)
         
+        #* CONVERT TO JSON SECTION
+        convert_to_json = convert_json(dict_scrapping, 'datos')
+        
         result_scrapping.append(dict_scrapping)
     
     
-    #* CONVERT TO JSON SECTION
-    convert_to_json = convert_json(result_scrapping, 'datos')
-    
     #* MONGODB SECTION
-    # client = connetion()              
+    client = connetion()              
 
-    # db_project = client['project_menus']
-    # menus_collection = db_project['menus']
+    try:
+        db_project = client['project_menus']
+        menus_collection = db_project['menus']
     
-    # #* insert menus on database
-    # insert_menus = menus_collection.insert_many(result_scrapping)
+        #* insert menus on database
+        insert_menus = menus_collection.insert_many(result_scrapping)
     
-    # #* Get all documents of menus
-    # find_menus = menus_collection.find({}, {"_id":0})
+        # #* Get all documents of menus
+        # find_menus = menus_collection.find({}, {"_id":0})
     
-    # #*Imprimir resultado con documentos
-    # print(dumps(find_menus, indent=2))
+        # #*Imprimir resultado con documentos
+        # print(dumps(find_menus, indent=2))
+    except Exception as err:
+        print('ERROR: ', err.args)
+    
+    
     return result_scrapping
+
+
+#*******************************************************
 
 
 if __name__ == "__main__":
@@ -70,7 +78,5 @@ if __name__ == "__main__":
     for menus in dicctionaries_menus:
         
         print(menus)
-        
-        # print(dumps(menus, indent=2))
         
         print('*'*50)
