@@ -71,7 +71,8 @@ def execute_program():
         print('ERROR: ', err.args)
     
     else:
-        print('Se ha insertado correctamente!!')
+        print('*'*50)
+        print('\n Se ha insertado correctamente!!')
     
     
     return result_scrapping
