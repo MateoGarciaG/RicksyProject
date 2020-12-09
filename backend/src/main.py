@@ -55,10 +55,13 @@ def execute_program():
         insert_menus = menus_collection.insert_many(result_scrapping)
     
         # #* Get all documents of menus
-        # find_menus = menus_collection.find({}, {"_id":0})
-    
-        # #*Imprimir resultado con documentos
-        # print(dumps(find_menus, indent=2))
+        find_menus = menus_collection.find({}, {"_id":0})
+
+        print('*'*50)
+        #*Imprimir resultado con documentos
+        print(dumps(find_menus, indent=4))
+        print('*'*50)
+        
     except Exception as err:
         print('ERROR: ', err.args)
     
@@ -77,8 +80,8 @@ if __name__ == "__main__":
     #* Ejecuta el programa
     dicctionaries_menus = execute_program()
     
-    for menus in dicctionaries_menus:
+    # for menus in dicctionaries_menus:
         
-        print(menus)
+    #     print(menus)
         
-        print('*'*50)
+    #     print('*'*50)
