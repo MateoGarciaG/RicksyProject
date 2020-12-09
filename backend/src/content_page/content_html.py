@@ -1,6 +1,9 @@
 
 import requests
 
+"""
+CONTENT_HTML MODULE - REQUESTS
+"""
 def get_html_content(url):
     
     #* PRECONDITIONAL
