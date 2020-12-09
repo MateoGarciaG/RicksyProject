@@ -16,10 +16,14 @@ from crawler.crawling import crawl_web
 #* WEB SCRAPPING MODULE
 from scrapping.scrapping import get_scrapping_content
 
+"""
+MAIN.PY
+"""
+
 
 #*************************************************************
 
-
+#* Function to execute_program
 def execute_program():
     
     
@@ -79,9 +83,3 @@ if __name__ == "__main__":
     
     #* Ejecuta el programa
     dicctionaries_menus = execute_program()
-    
-    # for menus in dicctionaries_menus:
-        
-    #     print(menus)
-        
-    #     print('*'*50)

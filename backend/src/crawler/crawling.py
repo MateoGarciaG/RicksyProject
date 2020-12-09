@@ -1,57 +1,9 @@
-# import requests
-
-# r = requests.get("https://mateogarciag.github.io/Project-dual-website")
-# the_html = r.text
-
 
 import requests
 
-def get_html_content(url):
-    
-    #* PRECONDITIONAL
-    assert isinstance(url, str) == True
-    
-    content_page = ''
-    mensaje = ''
-    
-    if url != '':
-        
-        try:
-            
-            if '.' in url:
-                page = requests.get(url)
-            
-            else:
-                raise requests.exceptions.InvalidURL
-
-        except requests.exceptions.InvalidURL as req:
-            mensaje = 'Invalid URL, try another'
-            
-        except requests.exceptions.MissingSchema as no_http:
-            mensaje = f'There\'s no protocol HTTP/s in URL, Invalid URL \'{url}\': No schema supplied. Perhaps you mean: \'https://{url}\''
-            
-        except requests.exceptions.HTTPError as error_http:
-            mensaje = f'There was a HTPP Error'
-            
-        except requests.exceptions.ConnectionError as con_error:
-            mensaje = f'There was a Conection Error'
-            
-        except Exception as exc:
-            mensaje = exc.args
-        
-        else:
-            
-            #* POSTCONDITIONAL
-            assert page.status_code == 200
-            
-            content_page = page.text
-            
-            return content_page
-
-    else:
-        return None
-    
-    return mensaje
+"""
+CRAWLING MODULE
+"""
 
 #* 
 def get_next_target(the_html):
@@ -116,21 +68,3 @@ def crawl_web(seed):
 
 if __name__ == "__main__":
     pass
-
-# links_index = get_all_links(get_html_content(page))
-# htmls = crawl_web('https://mateogarciag.github.io/Project-dual-website/comida1.html')
-# print(htmls)
-
-# example_html_string = get_html_content('https://mateogarciag.github.io/Project-dual-website/menu.html')
-
-# first_a = crawl_web('https://mateogarciag.github.io/Project-dual-website')
-
-# print(first_a)
-
-# html_string = get_html_content('https://mateogarciag.github.io/Project-dual-website/menu.html')
-
-# links = get_all_links(html_string)
-
-# print(links)
-
-# r = requests.get("https://mateogarciag.github.io/Project-dual-website")

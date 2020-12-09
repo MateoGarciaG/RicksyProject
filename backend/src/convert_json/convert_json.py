@@ -1,6 +1,10 @@
 import json
 # se importa un diccionario
 
+"""
+JSON MODULE
+"""
+
 def convert_json(myRecord, filename):
     
     #* PRECONDICIONALES
