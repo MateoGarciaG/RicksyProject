@@ -29,6 +29,7 @@ def execute_program():
     
     #* CRAWLER SECTION
     
+    #* CRAWLER_WEB
     links_menus_web = crawl_web('https://mateogarciag.github.io/Project-dual-website')
     
     #* WEB SCRAPPING SECTION
