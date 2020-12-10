@@ -37,9 +37,9 @@ La función de este programa es la de ser capaz de extraer información de un p�
 * MongoDB
 
 ### Documentación
-```
+
 https://github.com/MateoGarciaG/RicksyProject/blob/master/docs/DOC%20projecte.pdf
-```
+
 ### Licencia
 MIT License
 
