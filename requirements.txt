@@ -11,3 +11,6 @@ pymongo[srv]
 #* TEST
 pytest
 
+#* distribución
+setuptools
+wheel
