@@ -1,4 +1,3 @@
-
 #* Packages for our program
 requests
 
@@ -6,7 +5,9 @@ requests
 autopep8
 
 #* database
-pymongo
+pymongo[srv]
+#* dnspython
 
 #* TEST
 pytest
+

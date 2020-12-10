@@ -4,9 +4,9 @@ db.createCollection("menus",
         validator: {
             $jsonSchema: {
                 bsonType: "object",
-                required: ["name", "stock", "price", "descriptionMenu", "ingredients", "category"],
+                required: ["titulo", "stock", "price", "descriptionMenu", "ingredients", "category"],
                 properties: {
-                    name: {
+                    titulo: {
                         bsonType: "string",
                         description: "must be a string with name of menu"
                     },
@@ -39,3 +39,4 @@ db.createCollection("menus",
         }
     }
 )
+

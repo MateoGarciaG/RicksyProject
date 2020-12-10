@@ -1,6 +1,9 @@
 
 import requests
 
+"""
+CONTENT_HTML MODULE - REQUESTS
+"""
 def get_html_content(url):
     
     #* PRECONDITIONAL
@@ -50,6 +53,5 @@ def get_html_content(url):
 
 
 
-# if __name__ == "__main__":
-#     print(get_html_content('mateogarciag.github.io/Project-dual-website/'))
-    
+if __name__ == "__main__":
+    pass
