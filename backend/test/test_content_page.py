@@ -2,7 +2,13 @@
 
 
 from src.content_page.content_html import get_html_content
+import pytest
 
+"""
+CASES TEST CONTENT_PAGE
+"""
+
+@pytest.mark.content_page
 def test_get_html_content():
     assert get_html_content('') == None
     assert get_html_content('github') == 'Invalid URL, try another'

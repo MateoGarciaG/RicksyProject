@@ -1,6 +1,6 @@
 
 import requests
-from content_page.content_html import get_html_content
+from src.content_page.content_html import get_html_content
 
 """
 CRAWLING MODULE

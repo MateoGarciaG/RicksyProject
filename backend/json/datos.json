@@ -202,3 +202,39 @@
     ],
     "category": "Comida Chatarra"
 },
+{
+    "titulo": "ANDROMEDA",
+    "descriptionMenu": "Andromeda \u00e9s el mejor men\u00fa de este lado del universo.",
+    "stock": 30,
+    "price": 9.99,
+    "ingredients": [
+        "Carne de Marte",
+        "Lechuga de Jupiter",
+        "Tomate de Pluton"
+    ],
+    "category": "Comida Chatarra"
+},
+{
+    "titulo": "MILKYWAY",
+    "descriptionMenu": "Sabores ex\u00f3ticos desde lugares desconocidos.",
+    "stock": 30,
+    "price": 8.99,
+    "ingredients": [
+        "Patata de Andromeda",
+        "Lechuga de Jupiter",
+        "Sustancia 0"
+    ],
+    "category": "Comida Chatarra"
+},
+{
+    "titulo": "MAKO",
+    "descriptionMenu": "Este men\u00fa te dara la energ\u00eda necesaria para destruir un planeta.",
+    "stock": 30,
+    "price": 4.99,
+    "ingredients": [
+        "Pipas de la tierra",
+        "Gelatina de lenteja",
+        "Tomate de Pluton"
+    ],
+    "category": "Comida Chatarra"
+},

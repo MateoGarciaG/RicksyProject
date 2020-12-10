@@ -1,8 +1,14 @@
 from src.convert_json.convert_json import convert_json
 from src.scrapping.scrapping import get_scrapping_content
 from src.content_page.content_html import get_html_content
+import pytest
 
 
+"""
+CASES TEST JSON
+"""
+
+@pytest.mark.convert_json
 def test_convert_json():
     
     links = ['https://mateogarciag.github.io/Project-dual-website/comida1.html', 'https://mateogarciag.github.io/Project-dual-website/comida2.html', 'https://mateogarciag.github.io/Project-dual-website/comida3.html']

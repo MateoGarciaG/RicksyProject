@@ -2,10 +2,18 @@
 from src.content_page.content_html import get_html_content
 #* FUNTIONS WEB SCRAPPING MODULE IMPORT
 from src.scrapping.scrapping import  get_scrapping_content, find_content, get_all_labels, get_content_attribute
+import pytest
+
+"""
+CASES TEST SCRAPPING
+"""
+
 
 #* HTML_STRING: Contiene el string del html de comida1.html para realizar los casos test correctamente
 html_string = get_html_content('https://mateogarciag.github.io/Project-dual-website/comida1.html')
 
+
+@pytest.mark.scrapping
 def test_get_scrapping_content():
     
     assert get_scrapping_content('') == None
@@ -19,6 +27,7 @@ def test_get_scrapping_content():
     
 
 
+@pytest.mark.scrapping
 def test_find_content():
     
     assert find_content(html_string, '<input type="hidden" id="stock-menu" value="30">', attribute='value') == ['30']
@@ -28,7 +37,7 @@ def test_find_content():
     assert find_content(html_string, 'id="cancel">', second_content='</div>') == ['<img src="resources/svg/simbolo_eliminar_44.svg" alt="">']
     assert find_content(html_string, 'class="section-calidad-boton">', second_content='</button>') == ['<a href="https://mateogarciag.github.io/Project-dual-website/compra.html">PEDIR</a>']
 
-
+@pytest.mark.scrapping
 def test_get_all_labels():
     
     assert get_all_labels(html_string, 'h3') == ['<h3 class="titulo-menu"> ANDROMEDA </h3>', '<h3>Lorem Ipsum</h3>']
@@ -40,7 +49,7 @@ def test_get_all_labels():
     
     assert get_all_labels(html_string, 'A') == 'Not Found any label'
     
-    
+@pytest.mark.scrapping    
 def test_get_content_attribute():
     
     assert get_content_attribute('src', '<img class="logotipo" src="resources/img/calidad/logo.png" alt="">') == 'resources/img/calidad/logo.png'

@@ -1,11 +1,12 @@
 
+from src.database.db_conection import connection
+import pytest
 
 """
 TEST CASES DATABASE MODULE
 """
 
-from src.database.db_conection import connection
-
+@pytest.mark.db_conection
 def test_connection():
     
     assert isinstance(connection(), object) == True
