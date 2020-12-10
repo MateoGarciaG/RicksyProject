@@ -1,6 +1,7 @@
-from src.crawler.crawling import get_next_target, get_all_links, crawl_web, union
 
+from src.crawler.crawling import get_next_target, get_all_links, crawl_web
 from src.content_page.content_html import get_html_content
+
 
 
 
@@ -22,15 +23,6 @@ def test_get_all_links():
 def test_crawl_web():
     
     assert crawl_web('https://mateogarciag.github.io/Project-dual-website') == ['https://mateogarciag.github.io/Project-dual-website/calidad_menu5.html', 'https://mateogarciag.github.io/Project-dual-website/calidad_menu4.html', 'https://mateogarciag.github.io/Project-dual-website/calidad_menu3.html', 'https://mateogarciag.github.io/Project-dual-website/calidad_menu2.html', 'https://mateogarciag.github.io/Project-dual-website/calidad_menu1.html', 'https://mateogarciag.github.io/Project-dual-website/comida9.html', 'https://mateogarciag.github.io/Project-dual-website/comida8.html', 'https://mateogarciag.github.io/Project-dual-website/comida7.html', 'https://mateogarciag.github.io/Project-dual-website/comida6.html', 'https://mateogarciag.github.io/Project-dual-website/comida5.html', 'https://mateogarciag.github.io/Project-dual-website/comida4.html', 'https://mateogarciag.github.io/Project-dual-website/comida3.html', 'https://mateogarciag.github.io/Project-dual-website/comida2.html', 'https://mateogarciag.github.io/Project-dual-website/comida1.html']
-
-# def test_list_crawled():
-    # (crawled) = crawl_web(the_html)
-    # assert isinstance(crawled, list) == Truekn
-
-# def test_crawled_number():
-    # (crawled) = crawl_web(the_html)
-    # assert (crawled) == [0]
-
 
 
 ##PARA LA FUNCIÓN GET_ALL_LINKS

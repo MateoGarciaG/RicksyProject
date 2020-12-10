@@ -111,7 +111,7 @@ def find_content(html_string, first_content, second_content='', attribute=''):
         
         cont += 1
         
-    #* PRECONDITIONALS
+    #* POSTCONDITIONALS
     assert isinstance(result, list) == True
     
     return result
@@ -229,5 +229,4 @@ def get_content_attribute(attribute, label, class_label=None):
 
 if __name__ == "__main__":
     
-    pass
-    
+    hola = get_scrapping_content()

@@ -1,0 +1,204 @@
+{
+    "titulo": "PamBoli",
+    "descriptionMenu": "Un bon PamBoli amb tomatiga, sal i oliet d'es b\u00f3. Bonissim",
+    "stock": 30,
+    "price": 50.99,
+    "ingredients": [
+        "Tomatiga de Llucmajor",
+        "Oli de Campos",
+        "Pa de Palma"
+    ],
+    "category": "Comida Chatarra"
+},
+{
+    "titulo": "Expansi\u00f3n",
+    "descriptionMenu": "Men\u00fa desihdratado que rejuvenece con tu saliva(peta en la boca)",
+    "stock": 30,
+    "price": 30.99,
+    "ingredients": [
+        "Platano de Canaria deshidratado",
+        "BomBom deshidratado del planeta Frutimeri",
+        "Gusano desihdratado de Asgard"
+    ],
+    "category": "Comida Chatarra"
+},
+{
+    "titulo": "SecretMeal",
+    "descriptionMenu": "Ser\u00e0 lo mejor que has probado? o lo \u00faltimo que comeras?",
+    "stock": 30,
+    "price": 35.99,
+    "ingredients": [
+        "Secreto del Sol",
+        "Secreto de Marte",
+        "Secreto de la Tierra"
+    ],
+    "category": "Comida Chatarra"
+},
+{
+    "titulo": "JuicyWrld",
+    "descriptionMenu": "Mundos de sabores llegan a tus papilas",
+    "stock": 30,
+    "price": 43.99,
+    "ingredients": [
+        "Leche de vaca de Galicia",
+        "Cebada de Ourense",
+        "Trigo de Andalucia"
+    ],
+    "category": "Comida Chatarra"
+},
+{
+    "titulo": "Dommsday",
+    "descriptionMenu": "El juicio final llega a tu boca",
+    "stock": 30,
+    "price": 25.99,
+    "ingredients": [
+        "Polvos de estrella",
+        "Agua del subterraneo de Marte",
+        "Patatas del huerto de mi abuela"
+    ],
+    "category": "Comida Chatarra"
+},
+{
+    "titulo": "MEN\u00da:",
+    "descriptionMenu": "Desde los rincones m\u00e1s profundos del espacio, este men\u00fa est\u00e1 hecho de",
+    "stock": 30,
+    "price": 10.0,
+    "ingredients": [
+        "Polvos de Shaula",
+        "Lechuga de Jupiter",
+        "Sintesis de Kun"
+    ],
+    "category": "Comida Chatarra"
+},
+{
+    "titulo": "MEN\u00da:",
+    "descriptionMenu": "Desde los rincones m\u00e1s profundos del espacio, este men\u00fa est\u00e1 hecho de",
+    "stock": 30,
+    "price": 80.0,
+    "ingredients": [
+        "Carne de Marte",
+        "Lechuga de Jupiter",
+        "Tomate de Pluton"
+    ],
+    "category": "Comida Chatarra"
+},
+{
+    "titulo": "MEN\u00da:",
+    "descriptionMenu": "Desde los rincones m\u00e1s profundos del espacio, este men\u00fa est\u00e1 hecho de",
+    "stock": 30,
+    "price": 1.0,
+    "ingredients": [
+        "Carne de pollo de Pollux",
+        "Rekistakim de Altair",
+        "Calamar de Shaula"
+    ],
+    "category": "Comida Chatarra"
+},
+{
+    "titulo": "MEN\u00da:",
+    "descriptionMenu": "Desde los rincones m\u00e1s profundos del espacio, este men\u00fa est\u00e1 hecho de",
+    "stock": 30,
+    "price": 10.0,
+    "ingredients": [
+        "Agua sospechosa de Spica",
+        "Ma\u00edz de Marte",
+        "Verdura sin identificar de Regulus"
+    ],
+    "category": "Comida Chatarra"
+},
+{
+    "titulo": "TOFOL",
+    "descriptionMenu": "La hamburgesa mas artesana y sabrosa del universo.",
+    "stock": 30,
+    "price": 11.49,
+    "ingredients": [
+        "Carne de Betelguese",
+        "Vac\u00edo de Antares",
+        "Tomate de Mimosa"
+    ],
+    "category": "Comida Chatarra"
+},
+{
+    "titulo": "FUNKI",
+    "descriptionMenu": "Baila al ritmo de los espamos que provoca este men\u00fa.",
+    "stock": 30,
+    "price": 5.99,
+    "ingredients": [
+        "Tofu de Vega",
+        "Lechuga de Jupiter",
+        "Quarzo deshidratado"
+    ],
+    "category": "Comida Chatarra"
+},
+{
+    "titulo": "MAKO",
+    "descriptionMenu": "Este men\u00fa te dara la energ\u00eda necesaria para destruir un planeta.",
+    "stock": 30,
+    "price": 4.99,
+    "ingredients": [
+        "Pipas de la tierra",
+        "Gelatina de lenteja",
+        "Tomate de Pluton"
+    ],
+    "category": "Comida Chatarra"
+},
+{
+    "titulo": "MILKYWAY",
+    "descriptionMenu": "Sabores ex\u00f3ticos desde lugares desconocidos.",
+    "stock": 30,
+    "price": 8.99,
+    "ingredients": [
+        "Patata de Andromeda",
+        "Lechuga de Jupiter",
+        "Sustancia 0"
+    ],
+    "category": "Comida Chatarra"
+},
+{
+    "titulo": "ANDROMEDA",
+    "descriptionMenu": "Andromeda \u00e9s el mejor men\u00fa de este lado del universo.",
+    "stock": 30,
+    "price": 9.99,
+    "ingredients": [
+        "Carne de Marte",
+        "Lechuga de Jupiter",
+        "Tomate de Pluton"
+    ],
+    "category": "Comida Chatarra"
+},
+{
+    "titulo": "ANDROMEDA",
+    "descriptionMenu": "Andromeda \u00e9s el mejor men\u00fa de este lado del universo.",
+    "stock": 30,
+    "price": 9.99,
+    "ingredients": [
+        "Carne de Marte",
+        "Lechuga de Jupiter",
+        "Tomate de Pluton"
+    ],
+    "category": "Comida Chatarra"
+},
+{
+    "titulo": "MILKYWAY",
+    "descriptionMenu": "Sabores ex\u00f3ticos desde lugares desconocidos.",
+    "stock": 30,
+    "price": 8.99,
+    "ingredients": [
+        "Patata de Andromeda",
+        "Lechuga de Jupiter",
+        "Sustancia 0"
+    ],
+    "category": "Comida Chatarra"
+},
+{
+    "titulo": "MAKO",
+    "descriptionMenu": "Este men\u00fa te dara la energ\u00eda necesaria para destruir un planeta.",
+    "stock": 30,
+    "price": 4.99,
+    "ingredients": [
+        "Pipas de la tierra",
+        "Gelatina de lenteja",
+        "Tomate de Pluton"
+    ],
+    "category": "Comida Chatarra"
+},
