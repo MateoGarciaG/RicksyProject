@@ -4,7 +4,6 @@
 
 /** Aplicando la fuente importada y reduciendo el margin y padding*/
 * {
-    /* position: fixed;  */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -43,7 +42,6 @@ header {
 @media(max-width:900px){
     .titulo h1 {
         font-size: 25px;
-        /* padding-right: 20px; */
     }
 
     header nav li a {
@@ -126,7 +124,6 @@ nav #check {
 @media screen and (max-width:800px) {
 
     header {
-        /* position: fixed; */
         top: 0;
     }
 
@@ -246,7 +243,6 @@ section div .section-titulo2 h2 a{
     flex-direction: column;
     align-items: center;
     min-height: 100%;
-    /* opacity: 0.70; */
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
@@ -263,11 +259,7 @@ section div .section-titulo2 h2 a{
 /** *******************************************/
 
 footer {
-    /* position: absolute; */
-    /* left:0px; */
-    /* bottom: 0px; */
     width: 100%;
-    /* padding-right: 200px; */
     background: #225470;
 }
 
@@ -316,7 +308,6 @@ footer .redes-sociales ul li a img {
 }
 
 footer .redes-sociales ul li a {
-    /* position: relative; */
     /** Display flexbox para acomodar las imagenes de las redes sociales dentro del circulo blanco*/
     display: flex;
     justify-content: center;
@@ -325,13 +316,11 @@ footer .redes-sociales ul li a {
     height: 60px;
     border-radius: 50%;
     background-color: white;
-    /* text-align: center; */
     transition: 0.5s;
     transform: translate(0,0);
     box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
 }
 footer .redes-sociales ul li a:hover {
-    /* transform: rotate(0deg) skew(0deg) translate(0, -10px); */
     transform: rotate(0deg) skew(0deg) translate(0, -10px);
 }
 

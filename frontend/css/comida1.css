@@ -4,7 +4,6 @@
 
 /** Aplicando la fuente importada y reduciendo el margin y padding*/
 * {
-    /* position: fixed;  */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -43,7 +42,6 @@ header {
 @media(max-width:900px){
     .titulo h1 {
         font-size: 25px;
-        /* padding-right: 20px; */
     }
 
     header nav li a {
@@ -101,8 +99,6 @@ header nav li a:hover {
 */
 
 
-
-
 nav .line{
     width: 30px;
     height: 3px;
@@ -126,7 +122,6 @@ nav #check {
 @media screen and (max-width:800px) {
 
     header {
-        /* position: fixed; */
         top: 0;
     }
 
@@ -180,29 +175,6 @@ nav #check {
 
 /***********************SECTION*******************/
 
-/* .contenidor {
-    display: flex;
-    justify-content: flex-start;
-    background: url(../resources/img/calidad/fondo_calidad2.jpg);
-    height: 800px;
-    padding-top: 145px;
-    padding-left: 30px;
-
-}
-
-.contenidor .contenido .texto {
-    color: wheat;
-    background-color: rgb(160, 81, 160);
-    border-radius: 10%;
-    height: 500px;
-    width: 450px;
-    justify-content: center;
-    padding-left: 40px;
-    padding-top: 20px;
-    padding-right: 20px;
-    
-} */
-
 
 section {
     background: url(../resources/img/calidad/fondo_calidad2.jpg);
@@ -246,7 +218,7 @@ section {
 }
 
 .section-datos-menu button {
-    background-color: #b6b6b6; /* Green */
+    background-color: #b6b6b6;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -269,11 +241,7 @@ section {
 /* ***************FOOTER************** */
 
 footer {
-    /* position: absolute; */
-    /* left:0px; */
-    /* bottom: 0px; */
     width: 100%;
-    /* padding-right: 200px; */
     background: #225470;
 }
 
@@ -337,7 +305,6 @@ footer .redes-sociales ul li a {
     box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
 }
 footer .redes-sociales ul li a:hover {
-    /* transform: rotate(0deg) skew(0deg) translate(0, -10px); */
     transform: rotate(0deg) skew(0deg) translate(0, -10px);
 }
 

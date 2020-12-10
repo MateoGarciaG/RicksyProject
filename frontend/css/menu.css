@@ -180,14 +180,6 @@ label #btn, label #cancel {
 }
 
 /** ****************************************************/
-/* .nav-menu-true{
-    display:flex;
-    display:-webkit-flex;
-    display:-ms-flexbox;
-    flex-direction: row;
-    align-content: space-between;
-
-} */
 
 /** TEXTO color blanco MENUS COMIDAS */
 .all-images li, .all-images h4{
@@ -214,9 +206,7 @@ label #btn, label #cancel {
     box-shadow: 0 5px 202px rgba(0,0,0,0.5);
     transition: 0.3s ease-in-out;
     border-radius: 0.5cm;
-    /* justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap; */
+
 }
 .p-menu .card-contenido {
     display: flex;
@@ -338,7 +328,7 @@ label #btn, label #cancel {
 }
 
 .contenidor button {
-    background-color: grey; /* Green */
+    background-color: grey;
     border: none;
     color: yellow;
     padding: 10px 32px;
@@ -360,11 +350,7 @@ label #btn, label #cancel {
 /** FOOTER */
 /** *******************************************/
 footer {
-    /* position: absolute; */
-    /* left:0px; */
-    /* bottom: 0px; */
     width: 100%;
-    /* padding-right: 200px; */
     background: #225470;
 }
 .main-content {
@@ -414,13 +400,11 @@ footer .redes-sociales ul li a {
     height: 60px;
     border-radius: 50%;
     background-color: white;
-    /* text-align: center; */
     transition: 0.5s;
     transform: translate(0,0);
     box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
 }
 footer .redes-sociales ul li a:hover {
-    /* transform: rotate(0deg) skew(0deg) translate(0, -10px); */
     transform: rotate(0deg) skew(0deg) translate(0, -10px);
 }
 /** FACEBOOK color */

@@ -1,20 +1,20 @@
 
 #* MODULES
 #* DATABASE MODULE
-from database.db_conection import connection
+from src.database.db_conection import connection
 from bson.json_util import dumps
 
 #* REQUEST - CONTENT_PAGE MODULE
-from content_page.content_html import get_html_content
+from src.content_page.content_html import get_html_content
 
 #* CONVERT TO JSON MODULE
-from convert_json.convert_json import convert_json
+from src.convert_json.convert_json import convert_json
 
 #* CRAWEL MODULE
-from crawler.crawling import crawl_web
+from src.crawler.crawling import crawl_web
 
 #* WEB SCRAPPING MODULE
-from scrapping.scrapping import get_scrapping_content
+from src.scrapping.scrapping import get_scrapping_content
 
 """
 MAIN.PY

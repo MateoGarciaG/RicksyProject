@@ -8,9 +8,6 @@
     font-family: "Ubuntu", sans-serif;
 }
 
-/* body{
-    background: #1D212B;
-} */
 
 /** ******************************************/
 
@@ -37,23 +34,13 @@ header {
     font-size: 40px;
 }
 
-/* .logotipo {
-    border-radius: 10px;
-    width: auto;
-    height: auto;
-} */
-
 /** Si el tamaño de la página es menor a 700px, colocame más pequeño el logotipo y el h1 */
 @media(max-width:700px){
     .titulo h1 {
         font-size: 20px;
         padding-right: 20px;
     }
-    /* .logotipo {
-        border-radius: none;
-        width: 150px;
-        height: 150px;
-    } */
+
 }
 
 li, a {
@@ -313,11 +300,7 @@ label #btn, label #cancel {
 /** *******************************************/
 
 footer {
-    /* position: absolute; */
-    /* left:0px; */
-    /* bottom: 0px; */
     width: 100%;
-    /* padding-right: 200px; */
     background: #225470;
 }
 
@@ -366,7 +349,6 @@ footer .redes-sociales ul li a img {
 }
 
 footer .redes-sociales ul li a {
-    /* position: relative; */
     /** Display flexbox para acomodar las imagenes de las redes sociales dentro del circulo blanco*/
     display: flex;
     justify-content: center;
@@ -381,7 +363,6 @@ footer .redes-sociales ul li a {
     box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
 }
 footer .redes-sociales ul li a:hover {
-    /* transform: rotate(0deg) skew(0deg) translate(0, -10px); */
     transform: rotate(0deg) skew(0deg) translate(0, -10px);
 }
 

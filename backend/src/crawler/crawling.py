@@ -69,21 +69,3 @@ def crawl_web(seed):
 
 if __name__ == "__main__":
     pass
-
-# links_index = get_all_links(get_html_content(page))
-# htmls = crawl_web('https://mateogarciag.github.io/Project-dual-website/comida1.html')
-# print(htmls)
-
-# example_html_string = get_html_content('https://mateogarciag.github.io/Project-dual-website/menu.html')
-
-# first_a = crawl_web('https://mateogarciag.github.io/Project-dual-website')
-
-# print(first_a)
-
-# html_string = get_html_content('https://mateogarciag.github.io/Project-dual-website/menu.html')
-
-# links = get_all_links(html_string)
-
-# print(links)
-
-# r = requests.get("https://mateogarciag.github.io/Project-dual-website")
