@@ -178,89 +178,95 @@ nav #check {
 
 }
 
+/***********************SECTION*******************/
 
+/* .contenidor {
+    display: flex;
+    justify-content: flex-start;
+    background: url(../resources/img/calidad/fondo_calidad2.jpg);
+    height: 800px;
+    padding-top: 145px;
+    padding-left: 30px;
 
+}
 
-/** SECTION */
-/** *******************************************/
+.contenidor .contenido .texto {
+    color: wheat;
+    background-color: rgb(160, 81, 160);
+    border-radius: 10%;
+    height: 500px;
+    width: 450px;
+    justify-content: center;
+    padding-left: 40px;
+    padding-top: 20px;
+    padding-right: 20px;
+    
+} */
+
 
 section {
-    padding: 0px;
-    margin: 0px;
-}
-
-/** Section Titulo Gracias por su compra */
-section .section-titulo2 {
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    padding: 40px;
-    text-align: center;
-    border-radius: 20px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border: 7px solid rgb(255, 255, 255);
-    background-image: url('../resources/img/compra/space_planets_minimalist2.jpg');
-    width: 600px;
-    height: 260px;
-    
-}
-
-section div .section-titulo2 h2 a{
-    color:white;
-    -webkit-text-stroke: 0.5px rgb(255, 255, 255);
-    text-decoration: none;
-}
-
-
-/** LOGOTIPO PRINCIPAL */
-
-.main-logotipo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 25px;
-}
-
-.main-logotipo img {
-    width: 200px;
-    height: 200px;
-    border-radius: 20%;
-    border: 5px solid rgb(255, 255, 255);
-}
-
-
-
-/** *******************************************/
-
-/** ******************************************/
-
-/** IMAGEN INTERMEDIA ENTRE SECTIONS SCROLLING */
-
-
-/** IMAGEN SCROLLING SECTION */
-.img-scroll-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100%;
-    /* opacity: 0.70; */
-    background-position: top;
+    background: url(../resources/img/calidad/fondo_calidad2.jpg);
+    position: relative;
+    /* background-position: center; */
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    padding: 50px;
-    background-image: url('../resources/img/calidad/fondo_calidad2.jpg');
+    height: 100%;
 }
 
+.container-section{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 130px;
+    padding-bottom: 130px;
+}
 
-/** *******************************************/
+.section-menu-img img{
+    width: 350px;
+    height: 350px;
+    border-radius: 15%;
+}
 
+.section-datos-menu {
 
-/** FOOTER */
-/** *******************************************/
+    background: url('../resources/img/menu/planetas2.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    color: whitesmoke;
+    -webkit-text-stroke: 0.8px #000;
+    font-size: 25px;
+    padding: 50px;
+    border-radius: 10%;
+}
+
+.section-datos-menu button {
+    background-color: #b6b6b6; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
+}
+
+.section-datos-menu button a{
+
+    color: white;
+    text-decoration: none;
+
+}
+
+/* ***************FOOTER************** */
+/* ***************FOOTER************** */
+/* ***************FOOTER************** */
 
 footer {
     /* position: absolute; */
