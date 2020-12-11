@@ -229,4 +229,4 @@ def get_content_attribute(attribute, label, class_label=None):
 
 if __name__ == "__main__":
     
-    hola = get_scrapping_content()
+    pass
