@@ -1,7 +1,7 @@
 # Proyecto Scrapping
 ## RicksyProject
 
-![Project Logo](frontend/resources/img/logos/logo_rickMorty.jpg)
+![Project Logo](https://github.com/MateoGarciaG/RicksyProject/blob/master/frontend/resources/img/logos/logo_rickMorty.JPG)
 
 ### Descripción del Proyecto
 En este proyecto, hemos construido un sitio web con base HTML y CSS, para luego scrappear este mismo sitio construyendo propiamente un scrapper.
