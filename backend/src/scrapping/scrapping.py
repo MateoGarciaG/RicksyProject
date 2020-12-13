@@ -1,10 +1,17 @@
 
 
-"""
-    WEB SCRAPPING MODULE
+"""WEB SCRAPPING MODULE: This module consist of a serie of functions that handle HTML's content
 """
 
 def get_scrapping_content(html_string):
+    """get_scrapping_content: This function does scrapping over a html content related to Menus website to get information about a menu page.
+
+    Args:
+        html_string (str): It's the HTML's content that function will take its information about menu
+
+    Returns:
+        dict: Returns a dictionary with menu's information from result of scrapping of Menus Website's page
+    """
     
     #* PRECONDITIONAL
     assert isinstance(html_string, str) == True  
@@ -60,6 +67,17 @@ def get_scrapping_content(html_string):
     return menu_content
         
 def find_content(html_string, first_content, second_content='', attribute=''):
+    """find_content: This function find and scrapping the content that we want to get from a HTML's page. 
+
+    Args:
+        html_string (str): It's the HTML content where we want to get the information
+        first_content (str): It's the first point of content where the function will begin to search content that we want to get
+        second_content (str, optional): It's the last point of content where the function will search content that we want to get. Defaults to ''. Because in the case that we want to get content of a value's attribute from unique label, there's not will be obviusly a close label for example
+        attribute (str, optional): It's the type of attribute that we want to select to get value's content from a attribute of a unique label. Defaults to ''. Because it's depend on if we want to get content from a unique label
+
+    Returns:
+        list: Returns a list with results of scrapping HTML's content that we specified in Args.
+    """
     
     #* PRECONDITIONALS
     assert isinstance(html_string, str) == True
@@ -118,6 +136,16 @@ def find_content(html_string, first_content, second_content='', attribute=''):
 
 
 def get_all_labels(html_string, label):
+    """get_all_labels: This function get all label with their content from a HTML's content
+
+    Args:
+        html_string (str): It's the HTML content where we want to get all labels
+        label (str): It's the type of label that we specified to get all labels from html's content
+
+    Returns:
+        list: Returns a list with all labels get from HTML's content where every element contains the label and its content
+    """
+    
     
     #* PRECONDITIONAL
     assert isinstance(html_string, str) == True
@@ -201,6 +229,16 @@ def get_all_labels(html_string, label):
 
         
 def get_content_attribute(attribute, label, class_label=None):
+    """get_content_attribute: This function get content's attribute from a label
+
+    Args:
+        attribute (str): It's the type of attribute that we want to select to get value's content from a attribute of a label.
+        label (str): It's the type of label that function needs and after get content's attribute
+        class_label (str, optional): It's the class with their value. Defaults to None. It's optional because not all cases have a class.
+
+    Returns:
+        str: Returns a string with value's content of attribute from a label
+    """
     
     #* PRECONDITIONAL
     assert isinstance(attribute, str) == True
@@ -229,4 +267,7 @@ def get_content_attribute(attribute, label, class_label=None):
 
 if __name__ == "__main__":
     
-    pass
+    print(get_scrapping_content.__doc__)
+    print(find_content.__doc__)
+    print(get_all_labels.__doc__)
+    print(get_content_attribute.__doc__)

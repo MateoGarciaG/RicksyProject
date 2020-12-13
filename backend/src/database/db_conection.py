@@ -1,12 +1,19 @@
 
-"""
-DATABASE MODULE
-"""
-
 import  pymongo
 
+"""DATABASE MODULE: This module let to connect us to a mongoDB through MongoClient
+"""
 
 def connection(user='m001-student', password='m001-mongodb-basics'):
+    """connection: This function connects mongoDB to get MongoClient
+
+    Args:
+        user (str, optional): It's user's value for URL ATLAS srv. Defaults to 'm001-student'.
+        password (str, optional): It's password's value for URL ATLAS srv. Defaults to 'm001-mongodb-basics'.
+
+    Returns:
+        object: Returns a MongoClient object
+    """
     
     try:
         
@@ -21,4 +28,4 @@ def connection(user='m001-student', password='m001-mongodb-basics'):
     return mongo
 
 if __name__ == "__main__":
-    pass
+    print(connection.__doc__)

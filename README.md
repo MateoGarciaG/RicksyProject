@@ -1,6 +1,8 @@
 # Proyecto Scrapping
 ## RicksyProject
 
+![Project Logo](frontend/resources/img/logos/logo_rickMorty.jpg)
+
 ### Descripción del Proyecto
 En este proyecto, hemos construido un sitio web con base HTML y CSS, para luego scrappear este mismo sitio construyendo propiamente un scrapper.
 
@@ -23,8 +25,32 @@ nuevo_entorno_virtual\Scripts\activate.bat
 de esta manera el entorno ya estarà activado en la ruta que le haya indicado
 
 ### Funcionalidad
-La función de este programa es la de ser capaz de extraer información de un pàgina web y poder almacenarla en una base de datos, en este caso MongoDB.
+La función de este programa es la de ser capaz de extraer información de un pàgina web de menus y poder almacenarla en una base de datos, en este caso MongoDB.
 
+### Como distribución
+* Crea el directorio y sitúate en él:
+```
+$ mkdir ./RicksyProject
+$ cd RicksyProject
+```
+* Clona el proyecto
+```
+git clone https://github.com/MateoGarciaG/RicksyProject.git
+```
+* Activa el entorno virtual:
+```
+$ python3 -m venv venv
+$ source venv/bin/activate
+(venv) $ pip3 install -r requirements.txt
+```
+* Instala el proyecto:
+```
+$ pip3 install dist/Menus_Scrapping_Tool-0.0.1-py3-none-any.whl
+```
+* Ejecuta la herramienta:
+```
+python3 main.py
+```
 ### Tecnología de las cuales hemos hecho uso
 * Python 3
 * HTML5
@@ -35,10 +61,35 @@ La función de este programa es la de ser capaz de extraer información de un p�
 * dnspython
 * pytest
 * MongoDB
+* json module
 
 ### Documentación
 
-https://github.com/MateoGarciaG/RicksyProject/blob/master/docs/DOC%20projecte.pdf
+https://github.com/MateoGarciaG/RicksyProject/blob/master/docs/documentacion_proyecto_RicksyProject.pdf
+
+### Documentación mediante PyDoc
+También puedes acceder a la documentación respecto al backend y relacionada con cada modulo y función. Para ello necesitas primero activar el entorno virtual y mediante los siguientes comandos:
+
+* Para ver la documentación de un módulo:
+```
+$ python3 -m pydoc ruta/nombre_modulo
+```
+* Para ver la documentación de un fichero del módulo:
+```
+$ python3 -m pydoc ruta/nombre_modulo/nombre_fichero
+```
+* Con PyDoc podemos generar documentación de nuestro código donde se creará un fichero html con la información del fichero , esto con el siguiente comando:
+```
+$ python3 -m pydoc -w ruta/nombre_modulo/nombre_fichero
+```
+* En el caso de que lo hicieramos para un módulo:
+```
+$ python3 -m pydoc -w ruta/nombre_modulo . /
+```
+* Incluso PyDoc nos permite consultar toda nuestro documentación iniciando un servidor local temporal desde el directorio del paquete:
+```
+$ python3 -m pydoc -p 5001
+```
 
 ### Licencia
 MIT License

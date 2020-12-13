@@ -1,11 +1,19 @@
 import json
 # se importa un diccionario
 
-"""
-JSON MODULE
+"""JSON MODULE: The main purpose of this module is to let us convert a dictionary to JSON
 """
 
 def convert_json(myRecord, filename):
+    """convert_json: Write a dictionary into a JSON file that we specified
+
+    Args:
+        myRecord (dict): It's a dictionary that we want write into JSON file
+        filename (str): Name of JSON file where dictionary will be written
+
+    Returns:
+        str: Return a string with a message with information about the result's process of function
+    """
     
     #* PRECONDICIONALES
     assert isinstance(myRecord, dict)
@@ -29,3 +37,5 @@ def convert_json(myRecord, filename):
     return mensaje
 
 
+if __name__ == "__main__":
+    print(convert_json.__doc__)

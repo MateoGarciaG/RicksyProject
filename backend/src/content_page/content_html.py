@@ -1,10 +1,22 @@
 
 import requests
 
+"""CONTENT_HTML MODULE - REQUESTS: The main purpose of this module is let transform an URL to a string of HTML of the page.
 """
-CONTENT_HTML MODULE - REQUESTS
-"""
+
+
 def get_html_content(url):
+    """get_html_content: This function transform an URL to a string with HTML content of the page
+
+    Args:
+        url (str): It's URL that will be transformed to a string with HTML content of the page.
+
+    Raises:
+        requests.exceptions.InvalidURL: In the case of Arg: url is not a Valid URL format, this type of Exception will be raised.
+
+    Returns:
+        str: Return a string with HTML content of page's URL
+    """
     
     #* PRECONDITIONAL
     assert isinstance(url, str) == True
@@ -54,4 +66,4 @@ def get_html_content(url):
 
 
 if __name__ == "__main__":
-    pass
+    print(get_html_content.__doc__)

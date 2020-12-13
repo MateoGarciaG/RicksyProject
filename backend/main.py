@@ -16,16 +16,18 @@ from src.crawler.crawling import crawl_web
 #* WEB SCRAPPING MODULE
 from src.scrapping.scrapping import get_scrapping_content
 
+"""MAIN.PY: Main File where we program execute
 """
-MAIN.PY
-"""
-
 
 #*************************************************************
 
 #* Function to execute_program
 def execute_program():
-    
+    """execute_program: This function execute the application
+
+    Returns:
+        list: Return a list with the result of the application
+    """
     
     #* CRAWLER SECTION
     
@@ -82,6 +84,8 @@ def execute_program():
 
 
 if __name__ == "__main__":
+    
+    print(execute_program.__doc__)
     
     #* Ejecuta el programa
     dicctionaries_menus = execute_program()
